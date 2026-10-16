@@ -161,6 +161,12 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .feature i { font-style: normal; font-size: 26px; display: block; margin-bottom: 6px; }
 footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--edge); margin-top: 28px; }
 [hidden] { display: none !important; }
+.crumbs { font-size: 14px; color: var(--soft); margin: 0 0 10px; }
+.crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+.crumbs li + li::before { content: "›"; margin: 0 8px; opacity: .6; }
+.crumbs a { color: inherit; text-decoration: none; }
+.crumbs a:hover { color: var(--accent); }
+.crumbs [aria-current] { color: var(--ink); font-weight: 700; }
 @media (max-width: 720px) {
   .hero { grid-template-columns: 1fr; padding: 30px 20px 28px; border-radius: 26px; text-align: left; }
   .hero .logo { order: -1; width: 120px; }
@@ -233,6 +239,7 @@ def page(lang):
 <meta property="og:description" content="{t['desc']}">
 <meta property="og:image" content="https://wobqqq.github.io/cat-and-duck-studio/icon-512.png">
 {alt}
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"wobqqq","item":"https://wobqqq.github.io/"}},{{"@type":"ListItem","position":2,"name":"Cat & Duck Studio","item":"{home_url}{'ru/' if lang == 'ru' else ''}"}}]}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -241,6 +248,7 @@ def page(lang):
 <body>
 <div class="wrap">
 <header class="top"><a class="brand" href="./">{LOGO}<span>Cat &amp; Duck Studio</span></a>{switch}</header>
+<nav class="crumbs" aria-label="{'Навигация' if lang == 'ru' else 'Breadcrumb'}"><ol><li><a href="https://wobqqq.github.io/">wobqqq</a></li><li><span aria-current="page">Cat &amp; Duck Studio</span></li></ol></nav>
 <section class="hero">
   <div>
     <h1>Cat &amp; Duck Studio</h1>

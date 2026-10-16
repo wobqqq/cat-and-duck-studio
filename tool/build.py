@@ -56,7 +56,7 @@ GAMES = [
 T = {
     'ru': {
         'title': 'Cat & Duck Studio — уютные игры и приложения',
-        'desc': 'Cat & Duck Studio: уютные игры и приложения для Android, скоро — в браузере. Без интернета, без регистрации, на русском.',
+        'desc': 'Cat & Duck Studio: уютные игры для Android. Без интернета, без регистрации, на русском.',
         'tag': 'Уютные игры и приложения',
         'lead': 'Делаем спокойные игры, в которые приятно возвращаться: головоломки, слова и дачу. Играть можно без интернета и без регистрации.',
         'all': 'Все', 'android': 'Android', 'web': 'Веб',
@@ -69,12 +69,12 @@ T = {
         'f2': ('Без регистрации', 'Никаких аккаунтов и паролей.'),
         'f3': ('Бережно к вам', 'Не собираем личные данные.'),
         'contact': 'Связаться с нами',
-        'game': 'Игра',
+        'game': 'Игра', 'count': 'игр',
         'empty': 'Здесь пока пусто — но скоро будет.',
     },
     'en': {
         'title': 'Cat & Duck Studio — cozy games and apps',
-        'desc': 'Cat & Duck Studio: cozy games and apps for Android, soon in your browser. Offline, no sign-up.',
+        'desc': 'Cat & Duck Studio: cozy games for Android. Offline, no sign-up.',
         'tag': 'Cozy games and apps',
         'lead': 'We make calm games you like coming back to: puzzles, words and a country garden. Play offline, no sign-up.',
         'all': 'All', 'android': 'Android', 'web': 'Web',
@@ -87,7 +87,7 @@ T = {
         'f2': ('No sign-up', 'No accounts, no passwords.'),
         'f3': ('Respectful', 'We do not collect personal data.'),
         'contact': 'Contact us',
-        'game': 'Game',
+        'game': 'Game', 'count': 'games',
         'empty': 'Nothing here yet — but soon.',
     },
 }
@@ -208,12 +208,9 @@ def page(lang):
     for slug, _kind, names, store, color in GAMES:
         name, text = names[lang]
         cards.append(f'''<li class="card" data-p="android" style="--c:{color}">
-  <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span><span class="badge soon">{t['web']} · {t['soon']}</span></div></div></a>
+  <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>{text}</p>
   <div class="actions"><a class="btn" href="{store}">{t['store']}</a><a class="legal" href="{games}{slug}/{priv}">{t['privacy']}</a></div>
-</li>''')
-    cards.append(f'''<li class="card web" data-p="web">
-  <div class="big">🌐</div><h3>{t['web_title']}</h3><p>{t['web_text']}</p>
 </li>''')
     home_url = 'https://wobqqq.github.io/cat-and-duck-studio/'
     alt = (f'<link rel="alternate" hreflang="en" href="{home_url}">'
@@ -249,17 +246,15 @@ def page(lang):
     <h1>Cat &amp; Duck Studio</h1>
     <p class="tag">{t['tag']}</p>
     <p class="lead">{t['lead']}</p>
-    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🌐 {t['web']} <small>· {t['soon']}</small></span></div>
+    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span></div>
   </div>
   {LOGO}
 </section>
 <main>
-<div class="bar"><h2>{t['games']}</h2>
-<div class="tabs" role="group"><button type="button" data-f="all" aria-pressed="true">{t['all']}</button><button type="button" data-f="android" aria-pressed="false">Android</button><button type="button" data-f="web" aria-pressed="false">{t['web']}</button></div></div>
+<div class="bar"><h2>{t['games']}</h2></div>
 <ul class="grid">
 {chr(10).join(cards)}
 </ul>
-<p class="empty" hidden>{t['empty']}</p>
 <section class="features">
   <div class="feature"><i>📴</i><b>{t['f1'][0]}</b><span>{t['f1'][1]}</span></div>
   <div class="feature"><i>🙅</i><b>{t['f2'][0]}</b><span>{t['f2'][1]}</span></div>
@@ -268,7 +263,6 @@ def page(lang):
 </main>
 <footer><span>© 2026 Cat &amp; Duck Studio</span><span>{t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
 </div>
-<script>{JS}</script>
 </body>
 </html>
 '''

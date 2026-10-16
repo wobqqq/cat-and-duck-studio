@@ -261,8 +261,9 @@ def page(lang):
   <div class="feature"><i>🛡️</i><b>{t['f3'][0]}</b><span>{t['f3'][1]}</span></div>
 </section>
 </main>
-<footer><span>© 2026 Cat &amp; Duck Studio</span><span>{t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
+<footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span>{t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
 </div>
+<script>document.querySelectorAll(".year").forEach(function (e) {{ e.textContent = new Date().getFullYear(); }});</script>
 </body>
 </html>
 '''

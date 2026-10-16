@@ -187,7 +187,8 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
   <div class="feature"><i>🛡️</i><b>Бережно к вам</b><span>Не собираем личные данные.</span></div>
 </section>
 </main>
-<footer><span>© 2026 Cat &amp; Duck Studio</span><span>Связаться с нами: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
+<footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span>Связаться с нами: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
 </div>
+<script>document.querySelectorAll(".year").forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>

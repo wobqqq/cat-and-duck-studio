@@ -49,7 +49,7 @@ GAMES = [
      'https://www.rustore.ru/catalog/app/com.mydacha.game', '#5b9a3c'),
     ('skanvordy', 'game', {
         'ru': ('Уютные Сканворды и Филворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
-        'en': ('Scanwords', 'Arrow-word puzzles and word searches for every day, large letters.')},
+        'en': ('Cozy Scanwords and Word Search', 'Arrow-word puzzles and word searches for every day, large letters.')},
      'https://www.rustore.ru/catalog/app/com.scanwordgames.words', '#c0392b'),
 ]
 

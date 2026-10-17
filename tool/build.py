@@ -48,7 +48,7 @@ GAMES = [
         'en': ('My Dacha', 'Plant, harvest, sell: garden beds, a greenhouse, hens and a cat on the porch.')},
      'https://www.rustore.ru/catalog/app/com.mydacha.game', '#5b9a3c'),
     ('skanvordy', 'game', {
-        'ru': ('Сканворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
+        'ru': ('Уютные Сканворды и Филворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
         'en': ('Scanwords', 'Arrow-word puzzles and word searches for every day, large letters.')},
      'https://www.rustore.ru/catalog/app/com.scanwordgames.words', '#c0392b'),
 ]

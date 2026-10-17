@@ -44,12 +44,12 @@ GAMES = [
         'en': ('Who Blocked Me?', 'Get every car out of the yard without a scratch. 300+ levels.')},
      'https://www.rustore.ru/catalog/app/com.whoblockedme.game', '#ff8a3d'),
     ('dacha', 'game', {
-        'ru': ('Дача: мой участок', 'Посади, собери, продай: огород, теплица, курятник и кот на крыльце.'),
-        'en': ('My Dacha: Farm Story', 'Plant, harvest, sell: garden beds, a greenhouse, hens and a cat on the porch.')},
+        'ru': ('Дача', 'Посади, собери, продай: огород, теплица, курятник и кот на крыльце.'),
+        'en': ('My Dacha', 'Plant, harvest, sell: garden beds, a greenhouse, hens and a cat on the porch.')},
      'https://www.rustore.ru/catalog/app/com.mydacha.game', '#5b9a3c'),
     ('skanvordy', 'game', {
-        'ru': ('Сканворды и филворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
-        'en': ('Scanwords & Word Search', 'Arrow-word puzzles and word searches for every day, large letters.')},
+        'ru': ('Сканворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
+        'en': ('Scanwords', 'Arrow-word puzzles and word searches for every day, large letters.')},
      'https://www.rustore.ru/catalog/app/com.scanwordgames.words', '#c0392b'),
 ]
 
@@ -61,7 +61,7 @@ T = {
         'lead': 'Делаем спокойные игры, в которые приятно возвращаться: головоломки, слова и дачу. Играть можно без интернета и без регистрации.',
         'all': 'Все', 'android': 'Android', 'web': 'Веб',
         'games': 'Игры', 'soon': 'скоро',
-        'store': 'Скачать в RuStore', 'more': 'Подробнее',
+        'store': 'Скачать в RuStore', 'gallery': 'Скачать в AppGallery', 'more': 'Подробнее',
         'privacy': 'Конфиденциальность',
         'web_title': 'Скоро в браузере',
         'web_text': 'Наши игры появятся в вебе: открыл страницу — и играешь, ничего не устанавливая.',
@@ -79,7 +79,7 @@ T = {
         'lead': 'We make calm games you like coming back to: puzzles, words and a country garden. Play offline, no sign-up.',
         'all': 'All', 'android': 'Android', 'web': 'Web',
         'games': 'Games', 'soon': 'soon',
-        'store': 'Get it on RuStore', 'more': 'Details',
+        'store': 'Get it on RuStore', 'gallery': 'Get it on AppGallery', 'more': 'Details',
         'privacy': 'Privacy',
         'web_title': 'Coming to the browser',
         'web_text': 'Our games are coming to the web: open the page and play, nothing to install.',
@@ -147,6 +147,7 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .card p { margin: 0; color: var(--soft); font-size: 15px; flex: 1; }
 .card .actions { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
 .btn { display: inline-flex; align-items: center; justify-content: center; padding: 9px 14px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; text-decoration: none; }
+.card .stores { display: flex; gap: 8px; flex-wrap: wrap; }
 .btn.ghost { background: var(--chip); color: var(--ink); }
 .card .legal { font-size: 13px; color: var(--soft); }
 .card.web { border: 2px dashed var(--edge); background: transparent; box-shadow: none; justify-content: center; text-align: center; align-items: center; min-height: 200px; }
@@ -213,10 +214,12 @@ def page(lang):
     cards = []
     for slug, _kind, names, store, color in GAMES:
         name, text = names[lang]
+        # AppGallery button on every game, even before the game is published there (owner, 2026-10-17).
+        gallery = 'https://appgallery.huawei.com/app/detail?id=' + store.rsplit('/', 1)[1]
         cards.append(f'''<li class="card" data-p="android" style="--c:{color}">
   <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>{text}</p>
-  <div class="actions"><a class="btn" href="{store}">{t['store']}</a><a class="legal" href="{games}{slug}/{priv}">{t['privacy']}</a></div>
+  <div class="actions"><span class="stores"><a class="btn" href="{store}">{t['store']}</a><a class="btn" href="{gallery}">{t['gallery']}</a></span><a class="legal" href="{games}{slug}/{priv}">{t['privacy']}</a></div>
 </li>''')
     home_url = 'https://wobqqq.github.io/cat-and-duck-studio/'
     alt = (f'<link rel="alternate" hreflang="en" href="{home_url}">'

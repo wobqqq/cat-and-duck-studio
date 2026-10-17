@@ -40,8 +40,8 @@ GAMES = [
         'en': ('Pickle Sort', 'Sort pickles, tomatoes and jam into jars and seal the lid. 1000 levels.')},
      'https://www.rustore.ru/catalog/app/com.picklesort.game', '#f6b93b'),
     ('kto-menya-zaper', 'game', {
-        'ru': ('Кто меня запер?', 'Выпусти все машины со двора без единой царапины. Более 300 уровней.'),
-        'en': ('Who Blocked Me?', 'Get every car out of the yard without a scratch. 300+ levels.')},
+        'ru': ('Кто меня запер?', 'Выпусти все машины со двора без единой царапины. 300 уровней.'),
+        'en': ('Who Blocked Me?', 'Get every car out of the yard without a scratch. 300 levels.')},
      'https://www.rustore.ru/catalog/app/com.whoblockedme.game', '#ff8a3d'),
     ('dacha', 'game', {
         'ru': ('Дача', 'Посади, собери, продай: огород, теплица, курятник и кот на крыльце.'),

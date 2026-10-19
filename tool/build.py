@@ -59,6 +59,10 @@ GAMES = [
         'ru': ('Фабрика улыбок', 'Собери идеальную улыбку из зубов-пазлов: выступ в выемку, зуб в лунку. 300 уровней.'),
         'en': ('Smile Factory', 'Build the perfect smile from puzzle teeth: bump into dent, tooth into gap. 300 levels.')},
      'https://www.rustore.ru/catalog/app/com.smilefactory.game', '#14a38b'),
+    ('kholodilnik-po-polochkam', 'game', {
+        'ru': ('Холодильник по полочкам', 'Разложи продукты по полочкам: одна полка — один вид, без щелей, испорченное — в ведро. 300 уровней.'),
+        'en': ('Tidy Fridge', 'Put the groceries away: one kind per shelf, no gaps, spoiled food in the bin. 300 levels.')},
+     'https://www.rustore.ru/catalog/app/com.tidyfridge.game', '#3e8fd8'),
 ]
 
 T = {

@@ -51,6 +51,10 @@ GAMES = [
         'ru': ('Уютные Сканворды и Филворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
         'en': ('Cozy Scanwords and Word Search', 'Arrow-word puzzles and word searches for every day, large letters.')},
      'https://www.rustore.ru/catalog/app/com.scanwordgames.words', '#c0392b'),
+    ('dveri-zakryvayutsya', 'game', {
+        'ru': ('Осторожно, двери закрываются!', 'Поезд подъезжает к станции: проведи выходящих пассажиров к дверям. 300 станций.'),
+        'en': ('Mind the Doors!', 'The train is pulling in: get the passengers to the doors. 300 stations.')},
+     'https://www.rustore.ru/catalog/app/com.mindthedoors.game', '#d3263a'),
 ]
 
 T = {

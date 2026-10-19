@@ -55,6 +55,10 @@ GAMES = [
         'ru': ('Осторожно, двери закрываются!', 'Поезд подъезжает к станции: проведи выходящих пассажиров к дверям. 300 станций.'),
         'en': ('Mind the Doors!', 'The train is pulling in: get the passengers to the doors. 300 stations.')},
      'https://www.rustore.ru/catalog/app/com.mindthedoors.game', '#d3263a'),
+    ('fabrika-ulybok', 'game', {
+        'ru': ('Фабрика улыбок', 'Собери идеальную улыбку из зубов-пазлов: выступ в выемку, зуб в лунку. 300 уровней.'),
+        'en': ('Smile Factory', 'Build the perfect smile from puzzle teeth: bump into dent, tooth into gap. 300 levels.')},
+     'https://www.rustore.ru/catalog/app/com.smilefactory.game', '#14a38b'),
 ]
 
 T = {

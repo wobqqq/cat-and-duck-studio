@@ -8,8 +8,11 @@
 
 | | Game |
 |---|---|
-| 🛍️ | Bag of Bags |
-| 🥒 | Pickle Sort |
-| 🚗 | Who Blocked Me? |
-| 🌻 | My Dacha: Farm Story |
-| 📝 | Scanwords & Word Search |
+| 🛍️ | [Bag of Bags](https://wobqqq.github.io/bag-of-bags/en/) |
+| 🥒 | [Pickle Sort](https://wobqqq.github.io/zakatki/en/) |
+| 🚗 | [Who Blocked Me?](https://wobqqq.github.io/kto-menya-zaper/en/) |
+| 🌻 | [My Dacha](https://wobqqq.github.io/dacha/en/) |
+| 📝 | [Cozy Scanwords and Word Search](https://wobqqq.github.io/skanvordy/en/) |
+| 🚇 | [Mind the Doors!](https://wobqqq.github.io/dveri-zakryvayutsya/en/) |
+| 😁 | [Smile Factory](https://wobqqq.github.io/fabrika-ulybok/en/) |
+| 🧊 | [Tidy Fridge](https://wobqqq.github.io/kholodilnik-po-polochkam/en/) |

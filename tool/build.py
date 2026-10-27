@@ -81,6 +81,16 @@ GAMES = [
      'https://www.rustore.ru/catalog/app/com.otakuwords.game', '#ff6fae'),
 ]
 
+# The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);
+# the rest fall back to the package link until they are published.
+APPGALLERY = {
+    'zakatki': 'https://appgallery.huawei.com/app/C119428039',
+    'skanvordy': 'https://appgallery.huawei.com/app/C119427985',
+    'dveri-zakryvayutsya': 'https://appgallery.huawei.com/app/C119428067',
+    'fabrika-ulybok': 'https://appgallery.huawei.com/app/C119428149',
+    'kholodilnik-po-polochkam': 'https://appgallery.huawei.com/app/C119428199',
+}
+
 T = {
     'ru': {
         'title': 'Cat & Duck Studio — уютные игры и приложения',
@@ -243,7 +253,7 @@ def page(lang):
     for slug, _kind, names, store, color in GAMES:
         name, text = names[lang]
         # AppGallery button on every game, even before the game is published there (owner, 2026-10-17).
-        gallery = 'https://appgallery.huawei.com/app/detail?id=' + store.rsplit('/', 1)[1]
+        gallery = APPGALLERY.get(slug, 'https://appgallery.huawei.com/app/detail?id=' + store.rsplit('/', 1)[1])
         cards.append(f'''<li class="card" data-p="android" style="--c:{color}">
   <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>{text}</p>

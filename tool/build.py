@@ -63,6 +63,10 @@ GAMES = [
         'ru': ('Холодильник по полочкам', 'Разложи продукты по полочкам: одна полка — один вид, без щелей, испорченное — в ведро. 300 уровней.'),
         'en': ('Tidy Fridge', 'Put the groceries away: one kind per shelf, no gaps, spoiled food in the bin. 300 levels.')},
      'https://www.rustore.ru/catalog/app/com.tidyfridge.game', '#3e8fd8'),
+    ('florist', 'game', {
+        'ru': ('Флорист', 'Поверни стебли, чтобы каждый цветок дотянулся до ленты, — и букет расцветёт. 40 букетов в портфолио.'),
+        'en': ('Florist', 'Turn the stems until every flower reaches the ribbon, and the bouquet blooms. 40 bouquets to collect.')},
+     'https://www.rustore.ru/catalog/app/com.florist.game', '#ff6f91'),
 ]
 
 T = {

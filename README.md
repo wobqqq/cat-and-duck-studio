@@ -16,3 +16,4 @@
 | 🚇 | [Mind the Doors!](https://wobqqq.github.io/dveri-zakryvayutsya/en/) |
 | 😁 | [Smile Factory](https://wobqqq.github.io/fabrika-ulybok/en/) |
 | 🧊 | [Tidy Fridge](https://wobqqq.github.io/kholodilnik-po-polochkam/en/) |
+| 🌷 | [Florist](https://wobqqq.github.io/florist/en/) |

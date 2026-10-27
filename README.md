@@ -17,3 +17,6 @@
 | 😁 | [Smile Factory](https://wobqqq.github.io/fabrika-ulybok/en/) |
 | 🧊 | [Tidy Fridge](https://wobqqq.github.io/kholodilnik-po-polochkam/en/) |
 | 🌷 | [Florist](https://wobqqq.github.io/florist/en/) |
+| 📻 | [Scanwords from the USSR](https://wobqqq.github.io/skanvordy-sssr/en/) |
+| 🍷 | [Scanwords for Adults](https://wobqqq.github.io/skanvordy-18/en/) |
+| 🌸 | [Otaku Words](https://wobqqq.github.io/slova-otaku/en/) |

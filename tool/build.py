@@ -67,6 +67,18 @@ GAMES = [
         'ru': ('Флорист', 'Поверни стебли, чтобы каждый цветок дотянулся до ленты, — и букет расцветёт. 40 букетов в портфолио.'),
         'en': ('Florist', 'Turn the stems until every flower reaches the ribbon, and the bouquet blooms. 40 bouquets to collect.')},
      'https://www.rustore.ru/catalog/app/com.florist.game', '#ff6f91'),
+    ('skanvordy-sssr', 'game', {
+        'ru': ('Сканворды из СССР', 'Сканворды и филворды о советской жизни: кино, мультики, гастроном, космос. Ведёт дядя Миша из киоска.'),
+        'en': ('Scanwords from the USSR', 'Scanwords and word searches about everyday Soviet life: films, cartoons, the grocery, space.')},
+     'https://www.rustore.ru/catalog/app/com.sovietscanwords.game', '#d42a1f'),
+    ('skanvordy-18', 'game', {
+        'ru': ('Сканворды для взрослых', 'Сканворды и филворды 18+ с пикантными вопросами: флирт, застолье, казино. Вечер ведёт мадам Роза.'),
+        'en': ('Scanwords for Adults', 'Scanwords and word searches 18+ with cheeky clues: flirting, bars, casino. Hosted by Madame Rosa.')},
+     'https://www.rustore.ru/catalog/app/com.adultscanwords.game', '#8e1f4f'),
+    ('slova-otaku', 'game', {
+        'ru': ('Слова Отаку', 'Аниме филворды: найди слова из любимых тайтлов и мира отаку вместе с лисичкой Юки.'),
+        'en': ('Otaku Words', 'Anime word search: find words from your favourite shows and otaku culture with Yuki the fox girl.')},
+     'https://www.rustore.ru/catalog/app/com.otakuwords.game', '#ff6fae'),
 ]
 
 T = {

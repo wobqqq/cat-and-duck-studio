@@ -22,3 +22,4 @@
 | 🌸 | [Otaku Words](https://wobqqq.github.io/slova-otaku/en/) |
 | 🐀 | [Sewer Pipes](https://wobqqq.github.io/kanalizatsiya/en/) |
 | ✈️ | [Air Dispatcher: Landing](https://wobqqq.github.io/aviadispetcher/en/) |
+| 🪂 | [Skydive Hero](https://wobqqq.github.io/zatyazhnoy-pryzhok/en/) |

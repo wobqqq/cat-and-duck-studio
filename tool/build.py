@@ -79,6 +79,10 @@ GAMES = [
         'ru': ('Слова Отаку', 'Аниме филворды: найди слова из любимых тайтлов и мира отаку вместе с лисичкой Юки.'),
         'en': ('Otaku Words', 'Anime word search: find words from your favourite shows and otaku culture with Yuki the fox girl.')},
      'https://www.rustore.ru/catalog/app/com.otakuwords.game', '#ff6fae'),
+    ('kanalizatsiya', 'game', {
+        'ru': ('Канализация', 'Поверни трубы, чтобы вода из квартиры утекла в канализацию, а зелёная химия — в свой сток. Крыса-сантехник и граффити.'),
+        'en': ('Sewer Pipes', 'Turn the pipes so the water runs into the sewer and the green chemicals into their own drain. A plumber rat and graffiti.')},
+     'https://www.rustore.ru/catalog/app/com.sewerpipes.game', '#1c86d1'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

@@ -21,3 +21,4 @@
 | 🍷 | [Scanwords for Adults](https://wobqqq.github.io/skanvordy-18/en/) |
 | 🌸 | [Otaku Words](https://wobqqq.github.io/slova-otaku/en/) |
 | 🐀 | [Sewer Pipes](https://wobqqq.github.io/kanalizatsiya/en/) |
+| ✈️ | [Air Dispatcher: Landing](https://wobqqq.github.io/aviadispetcher/en/) |

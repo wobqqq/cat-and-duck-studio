@@ -89,6 +89,9 @@ APPGALLERY = {
     'dveri-zakryvayutsya': 'https://appgallery.huawei.com/app/C119428067',
     'fabrika-ulybok': 'https://appgallery.huawei.com/app/C119428149',
     'kholodilnik-po-polochkam': 'https://appgallery.huawei.com/app/C119428199',
+    'bag-of-bags': 'https://appgallery.huawei.com/app/C119427897',
+    'kto-menya-zaper': 'https://appgallery.huawei.com/app/C119427693',
+    'dacha': 'https://appgallery.huawei.com/app/C119427941',
 }
 
 T = {

@@ -88,8 +88,8 @@ GAMES = [
         'en': ('Air Dispatcher: Landing', 'Land every plane and helicopter before fuel runs out: 300 levels at 12 airports, wind, storms and night shifts.')},
      'https://www.rustore.ru/catalog/app/com.airdispatcher.game', '#4fb3ff'),
     ('zatyazhnoy-pryzhok', 'game', {
-        'ru': ('Затяжной прыжок', 'Прыгай с парашютом: кольца, трюки и групповые прыжки, 100 прыжков над 10 зонами — от летнего луга до стратосферы.'),
-        'en': ('Skydive Hero', 'Skydive through rings, do tricks and jump with friends: 100 jumps over 10 drop zones, from a summer meadow to the stratosphere.')},
+        'ru': ('Затяжной прыжок', 'Реалистичный затяжной прыжок: кольца, девять трюков и групповые прыжки, 300 прыжков над 10 зонами — от летнего луга до стратосферы.'),
+        'en': ('Skydive Hero', 'A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.')},
      'https://www.rustore.ru/catalog/app/com.skydivehero.game', '#38c6f4'),
 ]
 

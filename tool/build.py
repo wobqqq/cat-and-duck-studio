@@ -91,6 +91,10 @@ GAMES = [
         'ru': ('Затяжной прыжок', 'Реалистичный затяжной прыжок: кольца, девять трюков и групповые прыжки, 300 прыжков над 10 зонами — от летнего луга до стратосферы.'),
         'en': ('Skydive Hero', 'A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.')},
      'https://www.rustore.ru/catalog/app/com.skydivehero.game', '#38c6f4'),
+    ('stalnoy-front', 'game', {
+        'ru': ('Стальной фронт', 'Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.'),
+        'en': ('Steel Front', 'A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.')},
+     'https://www.rustore.ru/catalog/app/com.steelfront.game', '#b22222'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

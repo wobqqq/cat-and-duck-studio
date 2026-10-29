@@ -23,3 +23,4 @@
 | 🐀 | [Sewer Pipes](https://wobqqq.github.io/kanalizatsiya/en/) |
 | ✈️ | [Air Dispatcher: Landing](https://wobqqq.github.io/aviadispetcher/en/) |
 | 🪂 | [Skydive Hero](https://wobqqq.github.io/zatyazhnoy-pryzhok/en/) |
+| 🪖 | [Steel Front](https://wobqqq.github.io/stalnoy-front/en/) |

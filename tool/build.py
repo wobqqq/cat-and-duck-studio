@@ -82,7 +82,7 @@ GAMES = [
     ('kanalizatsiya', 'game', {
         'ru': ('Канализация', 'Поверни трубы, чтобы вода из квартиры утекла в канализацию, а зелёная химия — в свой сток. Крыса-сантехник и граффити.'),
         'en': ('Sewer Pipes', 'Turn the pipes so the water runs into the sewer and the green chemicals into their own drain. A plumber rat and graffiti.')},
-     'https://www.rustore.ru/catalog/app/com.sewerpipes.game', '#1c86d1'),
+     'https://www.rustore.ru/catalog/app/com.sewerpipes.game', '#f2c230'),
     ('aviadispetcher', 'game', {
         'ru': ('Авиадиспетчер: Посадка', 'Посади самолёты и вертолёты, пока не кончилось топливо: 300 уровней в 12 аэропортах, ветер, грозы и ночные смены.'),
         'en': ('Air Dispatcher: Landing', 'Land every plane and helicopter before fuel runs out: 300 levels at 12 airports, wind, storms and night shifts.')},

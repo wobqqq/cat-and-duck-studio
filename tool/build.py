@@ -95,6 +95,10 @@ GAMES = [
         'ru': ('Стальной фронт', 'Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.'),
         'en': ('Steel Front', 'A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.')},
      'https://www.rustore.ru/catalog/app/com.steelfront.game', '#b22222'),
+    ('sortirovochnaya', 'game', {
+        'ru': ('Сортировочная', 'Головоломка про советскую железную дорогу: собери поезд по натурному листу, 300 составов в шести эпохах, от паровозов до ЭР200.'),
+        'en': ('Sorting Yard', 'A Soviet railway puzzle: build the train by the waybill, 300 trains over six eras, from steam to the ER200.')},
+     'https://www.rustore.ru/catalog/app/com.sortingyard.game', '#1f4d3a'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

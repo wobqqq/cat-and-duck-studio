@@ -99,6 +99,10 @@ GAMES = [
         'ru': ('Сортировочная', 'Головоломка про советскую железную дорогу: собери поезд по натурному листу, 300 составов в шести эпохах, от паровозов до ЭР200.'),
         'en': ('Sorting Yard', 'A Soviet railway puzzle: build the train by the waybill, 300 trains over six eras, from steam to the ER200.')},
      'https://www.rustore.ru/catalog/app/com.sortingyard.game', '#1f4d3a'),
+    ('tihaya-ohota', 'game', {
+        'ru': ('Тихая Охота', 'Уютная грибная головоломка: собирай настоящие грибы лесов России и Беларуси в корзину и не перепутай с ядовитыми двойниками. 300 полян, 27 видов и справочник грибника.'),
+        'en': ('Mushroom Picker', 'A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 27 species and a mushroom guide.')},
+     'https://www.rustore.ru/catalog/app/com.tihayaohota.game', '#4e7a34'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

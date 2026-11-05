@@ -61,13 +61,15 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .tabs { display: flex; gap: 6px; background: var(--chip); padding: 4px; border-radius: 999px; }
 .tabs button { border: 0; background: transparent; color: var(--soft); font: inherit; font-size: 15px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer; }
 .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 0 var(--edge); }
-.grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 .card { position: relative; background: var(--card); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; transition: transform .18s ease, box-shadow .18s ease; }
 .card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 72px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .22; pointer-events: none; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 2px 0 var(--edge), 0 18px 32px rgba(90, 55, 20, .14); }
 .card .head { position: relative; display: flex; gap: 14px; align-items: center; color: var(--ink); text-decoration: none; }
 .card img { width: 76px; height: 76px; border-radius: 20px; flex: none; box-shadow: 0 4px 10px rgba(90, 55, 20, .18); }
-.card h3 { margin: 0; font-size: 19px; line-height: 1.2; font-weight: 800; }
+.card .head > div { min-width: 0; flex: 1; padding-right: 4px; }
+.card h3 { margin: 0; font-size: 18px; line-height: 1.2; font-weight: 800; overflow-wrap: break-word; }
+.more { height: 1px; }
 .card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
 .badge { font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--soft); }
 .badge.soon { opacity: .75; }
@@ -255,6 +257,7 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tihayaohota.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.tihayaohota.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/tihaya-ohota/en/privacy.html">Privacy</a></div>
 </li>
 </ul>
+<div class="more" aria-hidden="true"></div>
 <section class="features">
   <div class="feature"><i>📴</i><b>Offline</b><span>Every game works without the internet.</span></div>
   <div class="feature"><i>🙅</i><b>No sign-up</b><span>No accounts, no passwords.</span></div>
@@ -263,6 +266,23 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
 </main>
 <footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span>Contact us: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
 </div>
+<script>
+(function () {
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.grid > li'));
+  var more = document.querySelector('.more');
+  var size = 24, shown = 0;
+  if (cards.length <= size || !('IntersectionObserver' in window)) return;
+  cards.forEach(function (c) { c.hidden = true; });
+  function next() {
+    cards.slice(shown, shown + size).forEach(function (c) { c.hidden = false; });
+    shown += size;
+    if (shown >= cards.length) io.disconnect();
+  }
+  var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) next(); }, {rootMargin: '400px'});
+  next();
+  io.observe(more);
+})();
+</script>
 <script>document.querySelectorAll(".year").forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>
 </body>
 </html>

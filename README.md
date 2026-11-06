@@ -28,4 +28,5 @@
 | 🍄 | [Mushroom Picker](https://wobqqq.github.io/tihaya-ohota/en/) |
 | 📼 | [90s Rewind](https://wobqqq.github.io/peremotka-90/en/) |
 | 🐈 | [Cat on Keyboard](https://wobqqq.github.io/kot-na-klave/en/) |
+| 🧖 | [Bathhouse Master](https://wobqqq.github.io/banny-den/en/) |
 | 🔦 | [Classroom 13](https://wobqqq.github.io/klass-13/en/) |

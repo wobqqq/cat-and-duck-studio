@@ -107,6 +107,10 @@ GAMES = [
         'ru': ('Перемотка девяностых', 'Ламповая ASMR-головоломка из 90-х: распутай зажёванную плёнку, смотай её карандашом и включи магнитофон. 300 кассет и своя музыка в духе 90-х.'),
         'en': ('90s Rewind', 'A cozy 90s ASMR puzzle: untangle the chewed tape, wind it back with a pencil and press Play. 300 cassettes and original 90s-style music.')},
      'https://www.rustore.ru/catalog/app/com.rewind90s.game', '#7a1f2b'),
+    ('kot-na-klave', 'game', {
+        'ru': ('Кот на клаве', 'Уютная головоломка: пушистый кот уснул на клавиатуре — уложи его лапки и перенеси на подушку, не разбудив. 300 уровней, 40 окрасов и десятки клавиатур.'),
+        'en': ('Cat on Keyboard', 'A cosy puzzle: a fluffy cat fell asleep on your keyboard. Fold its paws and carry it to a cushion without waking it. 300 levels, 40 coats and dozens of keyboards.')},
+     'https://www.rustore.ru/catalog/app/com.catonkeyboard.game', '#5b4bb8'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

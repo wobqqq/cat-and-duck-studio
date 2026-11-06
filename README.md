@@ -27,3 +27,4 @@
 | 🚂 | [Sorting Yard](https://wobqqq.github.io/sortirovochnaya/en/) |
 | 🍄 | [Mushroom Picker](https://wobqqq.github.io/tihaya-ohota/en/) |
 | 📼 | [90s Rewind](https://wobqqq.github.io/peremotka-90/en/) |
+| 🐈 | [Cat on Keyboard](https://wobqqq.github.io/kot-na-klave/en/) |

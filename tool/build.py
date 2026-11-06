@@ -115,6 +115,10 @@ GAMES = [
         'ru': ('Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
         'en': ('Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},
      'https://www.rustore.ru/catalog/app/com.classroom13.game', '#e2b45a'),
+    ('banny-den', 'game', {
+        'ru': ('Банный день', 'Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.'),
+        'en': ('Bathhouse Master', 'A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar\'s bathhouse.')},
+     'https://www.rustore.ru/catalog/app/com.bathhousemaster.game', '#c8743a'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

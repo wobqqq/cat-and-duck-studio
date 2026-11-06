@@ -103,6 +103,10 @@ GAMES = [
         'ru': ('Тихая Охота', 'Уютная грибная головоломка: собирай настоящие грибы лесов России и Беларуси в корзину и не перепутай с ядовитыми двойниками. 300 полян, 150 видов и справочник грибника.'),
         'en': ('Mushroom Picker', 'A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 150 species and a mushroom guide.')},
      'https://www.rustore.ru/catalog/app/com.tihayaohota.game', '#4e7a34'),
+    ('peremotka-90', 'game', {
+        'ru': ('Перемотка девяностых', 'Ламповая ASMR-головоломка из 90-х: распутай зажёванную плёнку, смотай её карандашом и включи магнитофон. 300 кассет и своя музыка в духе 90-х.'),
+        'en': ('90s Rewind', 'A cozy 90s ASMR puzzle: untangle the chewed tape, wind it back with a pencil and press Play. 300 cassettes and original 90s-style music.')},
+     'https://www.rustore.ru/catalog/app/com.rewind90s.game', '#7a1f2b'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

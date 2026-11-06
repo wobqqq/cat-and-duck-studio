@@ -26,3 +26,4 @@
 | 🪖 | [Steel Front](https://wobqqq.github.io/stalnoy-front/en/) |
 | 🚂 | [Sorting Yard](https://wobqqq.github.io/sortirovochnaya/en/) |
 | 🍄 | [Mushroom Picker](https://wobqqq.github.io/tihaya-ohota/en/) |
+| 📼 | [90s Rewind](https://wobqqq.github.io/peremotka-90/en/) |

@@ -112,8 +112,8 @@ GAMES = [
         'en': ('Cat on Keyboard', 'A cosy puzzle: a fluffy cat fell asleep on your keyboard. Fold its paws and carry it to a cushion without waking it. 300 levels, 40 coats and dozens of keyboards.')},
      'https://www.rustore.ru/catalog/app/com.catonkeyboard.game', '#5b4bb8'),
     ('klass-13', 'game', {
-        'ru': ('Дежурство: Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
-        'en': ('Night Duty: Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},
+        'ru': ('Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
+        'en': ('Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},
      'https://www.rustore.ru/catalog/app/com.classroom13.game', '#e2b45a'),
 ]
 

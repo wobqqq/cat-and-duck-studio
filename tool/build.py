@@ -132,6 +132,8 @@ APPGALLERY = {
     'bag-of-bags': 'https://appgallery.huawei.com/app/C119427897',
     'kto-menya-zaper': 'https://appgallery.huawei.com/app/C119427693',
     'dacha': 'https://appgallery.huawei.com/app/C119427941',
+    'skanvordy-sssr': 'https://appgallery.huawei.com/app/C119605979',
+    'sortirovochnaya': 'https://appgallery.huawei.com/app/C119630507',
 }
 
 T = {

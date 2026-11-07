@@ -119,6 +119,10 @@ GAMES = [
         'ru': ('Банный день', 'Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.'),
         'en': ('Bathhouse Master', 'A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar\'s bathhouse.')},
      'https://www.rustore.ru/catalog/app/com.bathhousemaster.game', '#c8743a'),
+    ('lift-v-panelke', 'game', {
+        'ru': ('Лифт в панельке', 'Головоломка про лифтёра панельки: развези соседей по этажам, следи за весами и не перегрузи старый лифт. 300 уровней, до 16 этажей и четырёх подъездов, баба Зина с рассадой и поломки «ЖЭК-хардкор».'),
+        'en': ('Panel House Lift', 'A lift operator puzzle in a Soviet panel block: take the neighbours to their floors, watch the weight needle and never overload the old lift. 300 levels, up to 16 floors and four entrances, Granny Zina with her seedlings and plenty of breakdowns.')},
+     'https://www.rustore.ru/catalog/app/com.panelhouselift.game', '#2fa37f'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

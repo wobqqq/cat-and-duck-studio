@@ -61,24 +61,30 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .tabs { display: flex; gap: 6px; background: var(--chip); padding: 4px; border-radius: 999px; }
 .tabs button { border: 0; background: transparent; color: var(--soft); font: inherit; font-size: 15px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer; }
 .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 0 var(--edge); }
-.grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-.card { position: relative; background: var(--card); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; transition: transform .18s ease, box-shadow .18s ease; }
-.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 72px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .22; pointer-events: none; }
+.grid { scroll-margin-top: 16px; list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.card { position: relative; min-width: 0; background: var(--card); border-radius: 24px; padding: 20px 16px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; text-align: center; transition: transform .18s ease, box-shadow .18s ease; }
+.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 96px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .24; pointer-events: none; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 2px 0 var(--edge), 0 18px 32px rgba(90, 55, 20, .14); }
-.card .head { position: relative; display: flex; gap: 14px; align-items: center; color: var(--ink); text-decoration: none; }
-.card img { width: 76px; height: 76px; border-radius: 20px; flex: none; box-shadow: 0 4px 10px rgba(90, 55, 20, .18); }
-.card .head > div { min-width: 0; flex: 1; padding-right: 4px; }
-.card h3 { margin: 0; font-size: 18px; line-height: 1.2; font-weight: 800; overflow-wrap: break-word; }
-.more { height: 1px; }
-.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.card .head { position: relative; display: flex; flex-direction: column; gap: 10px; align-items: center; color: var(--ink); text-decoration: none; }
+.card img { display: block; width: 96px; height: 96px; border-radius: 24px; flex: none; box-shadow: 0 6px 14px rgba(90, 55, 20, .2); background: var(--chip); }
+.card .head > div { min-width: 0; width: 100%; }
+.card h3 { margin: 0; font-size: 18px; line-height: 1.22; font-weight: 800; overflow-wrap: break-word; text-wrap: balance; min-height: 2.44em; display: flex; align-items: center; justify-content: center; }
+.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; justify-content: center; }
 .badge { font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--soft); }
 .badge.soon { opacity: .75; }
-.card p { margin: 0; color: var(--soft); font-size: 15px; flex: 1; }
-.card .actions { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; justify-content: center; padding: 9px 14px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; text-decoration: none; }
-.card .stores { display: flex; gap: 8px; flex-wrap: wrap; }
+.card p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.45; flex: 1; overflow-wrap: break-word; text-wrap: pretty; }
+.card .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+.btn { display: flex; align-items: center; justify-content: center; text-align: center; padding: 9px 12px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; line-height: 1.25; text-decoration: none; }
+.btn:hover { filter: brightness(1.08); }
+.card .stores { display: flex; flex-direction: column; gap: 8px; }
 .btn.ghost { background: var(--chip); color: var(--ink); }
 .card .legal { font-size: 13px; color: var(--soft); }
+.pager { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin: 28px 0 0; }
+.pager button { min-width: 42px; height: 42px; padding: 0 12px; border: 0; border-radius: 14px; background: var(--card); color: var(--ink); font: inherit; font-size: 16px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 0 var(--edge); }
+.pager button:hover:not(:disabled) { color: var(--accent); }
+.pager button[aria-current="page"] { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
+.pager button:disabled { opacity: .4; cursor: default; }
+.pager .gap { color: var(--soft); padding: 0 4px; font-weight: 800; }
 .card.web { border: 2px dashed var(--edge); background: transparent; box-shadow: none; justify-content: center; text-align: center; align-items: center; min-height: 200px; }
 .card.web p { flex: none; }
 .card.web::before { display: none; }
@@ -103,8 +109,12 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
   .features { grid-template-columns: 1fr; }
   .bar h2 { font-size: 24px; }
 }
-@media (max-width: 420px) {
-  .grid { grid-template-columns: 1fr; }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+@media (max-width: 520px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 18px 16px 16px; }
+  .card h3 { min-height: 0; }
 }
 </style>
 </head>
@@ -166,128 +176,128 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
 <main>
 <div class="bar"><h2>Игры</h2></div>
 <ul class="grid">
+<li class="card" data-p="android" style="--c:#c0603a">
+  <a class="head" href="https://wobqqq.github.io/po-pogode/"><img src="https://wobqqq.github.io/po-pogode/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>По погоде</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.weatherdressup.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.weatherdressup.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/po-pogode/privacy.html">Конфиденциальность</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#c8743a">
+  <a class="head" href="https://wobqqq.github.io/banny-den/"><img src="https://wobqqq.github.io/banny-den/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Банный день</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bathhousemaster.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.bathhousemaster.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/banny-den/privacy.html">Конфиденциальность</a></div>
+</li>
 <li class="card" data-p="android" style="--c:#ffd25a">
-  <a class="head" href="https://wobqqq.github.io/bag-of-bags/"><img src="https://wobqqq.github.io/bag-of-bags/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Пакет с пакетами</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/bag-of-bags/"><img src="https://wobqqq.github.io/bag-of-bags/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Пакет с пакетами</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Сложи все пакеты в один: складывай, поворачивай, вкладывай. 240 уровней.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bagofbags.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427897">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/bag-of-bags/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#f6b93b">
-  <a class="head" href="https://wobqqq.github.io/zakatki/"><img src="https://wobqqq.github.io/zakatki/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Закатки</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/zakatki/"><img src="https://wobqqq.github.io/zakatki/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Закатки</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Разложи огурцы, помидоры и варенье по банкам и закатай крышку. 1000 уровней.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.picklesort.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428039">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/zakatki/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#ff8a3d">
-  <a class="head" href="https://wobqqq.github.io/kto-menya-zaper/"><img src="https://wobqqq.github.io/kto-menya-zaper/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Кто меня запер?</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/kto-menya-zaper/"><img src="https://wobqqq.github.io/kto-menya-zaper/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Кто меня запер?</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Выпусти все машины со двора без единой царапины. 300 уровней.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.whoblockedme.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427693">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kto-menya-zaper/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#5b9a3c">
-  <a class="head" href="https://wobqqq.github.io/dacha/"><img src="https://wobqqq.github.io/dacha/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Дача</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/dacha/"><img src="https://wobqqq.github.io/dacha/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Дача</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Посади, собери, продай: огород, теплица, курятник и кот на крыльце.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.mydacha.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427941">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/dacha/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#c0392b">
-  <a class="head" href="https://wobqqq.github.io/skanvordy/"><img src="https://wobqqq.github.io/skanvordy/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Уютные Сканворды и Филворды</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/skanvordy/"><img src="https://wobqqq.github.io/skanvordy/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Уютные Сканворды и Филворды</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Сканворды со стрелками и филворды на каждый день, крупные буквы.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.scanwordgames.words">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427985">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#d3263a">
-  <a class="head" href="https://wobqqq.github.io/dveri-zakryvayutsya/"><img src="https://wobqqq.github.io/dveri-zakryvayutsya/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Осторожно, двери закрываются!</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/dveri-zakryvayutsya/"><img src="https://wobqqq.github.io/dveri-zakryvayutsya/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Осторожно, двери закрываются!</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Поезд подъезжает к станции: проведи выходящих пассажиров к дверям. 300 станций.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.mindthedoors.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428067">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/dveri-zakryvayutsya/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#14a38b">
-  <a class="head" href="https://wobqqq.github.io/fabrika-ulybok/"><img src="https://wobqqq.github.io/fabrika-ulybok/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Фабрика улыбок</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/fabrika-ulybok/"><img src="https://wobqqq.github.io/fabrika-ulybok/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Фабрика улыбок</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Собери идеальную улыбку из зубов-пазлов: выступ в выемку, зуб в лунку. 300 уровней.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.smilefactory.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428149">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/fabrika-ulybok/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#3e8fd8">
-  <a class="head" href="https://wobqqq.github.io/kholodilnik-po-polochkam/"><img src="https://wobqqq.github.io/kholodilnik-po-polochkam/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Холодильник по полочкам</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/kholodilnik-po-polochkam/"><img src="https://wobqqq.github.io/kholodilnik-po-polochkam/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Холодильник по полочкам</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Разложи продукты по полочкам: одна полка — один вид, без щелей, испорченное — в ведро. 300 уровней.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tidyfridge.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428199">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kholodilnik-po-polochkam/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#ff6f91">
-  <a class="head" href="https://wobqqq.github.io/florist/"><img src="https://wobqqq.github.io/florist/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Флорист</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/florist/"><img src="https://wobqqq.github.io/florist/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Флорист</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Поверни стебли, чтобы каждый цветок дотянулся до ленты, — и букет расцветёт. 40 букетов в портфолио.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.florist.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.florist.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/florist/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#d42a1f">
-  <a class="head" href="https://wobqqq.github.io/skanvordy-sssr/"><img src="https://wobqqq.github.io/skanvordy-sssr/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Сканворды из СССР</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/skanvordy-sssr/"><img src="https://wobqqq.github.io/skanvordy-sssr/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Сканворды из СССР</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Сканворды и филворды о советской жизни: кино, мультики, гастроном, космос. Ведёт дядя Миша из киоска.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sovietscanwords.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119605979">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy-sssr/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#8e1f4f">
-  <a class="head" href="https://wobqqq.github.io/skanvordy-18/"><img src="https://wobqqq.github.io/skanvordy-18/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Сканворды для взрослых</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/skanvordy-18/"><img src="https://wobqqq.github.io/skanvordy-18/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Сканворды для взрослых</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Сканворды и филворды 18+ с пикантными вопросами: флирт, застолье, казино. Вечер ведёт мадам Роза.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.adultscanwords.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.adultscanwords.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy-18/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#ff6fae">
-  <a class="head" href="https://wobqqq.github.io/slova-otaku/"><img src="https://wobqqq.github.io/slova-otaku/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Слова Отаку</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/slova-otaku/"><img src="https://wobqqq.github.io/slova-otaku/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Слова Отаку</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Аниме филворды: найди слова из любимых тайтлов и мира отаку вместе с лисичкой Юки.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.otakuwords.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.otakuwords.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/slova-otaku/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#f2c230">
-  <a class="head" href="https://wobqqq.github.io/kanalizatsiya/"><img src="https://wobqqq.github.io/kanalizatsiya/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Канализация</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/kanalizatsiya/"><img src="https://wobqqq.github.io/kanalizatsiya/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Канализация</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Поверни трубы, чтобы вода из квартиры утекла в канализацию, а зелёная химия — в свой сток. Крыса-сантехник и граффити.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sewerpipes.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.sewerpipes.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kanalizatsiya/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#4fb3ff">
-  <a class="head" href="https://wobqqq.github.io/aviadispetcher/"><img src="https://wobqqq.github.io/aviadispetcher/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Авиадиспетчер: Посадка</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/aviadispetcher/"><img src="https://wobqqq.github.io/aviadispetcher/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Авиадиспетчер: Посадка</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Посади самолёты и вертолёты, пока не кончилось топливо: 300 уровней в 12 аэропортах, ветер, грозы и ночные смены.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.airdispatcher.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.airdispatcher.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/aviadispetcher/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#38c6f4">
-  <a class="head" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/"><img src="https://wobqqq.github.io/zatyazhnoy-pryzhok/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Затяжной прыжок</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/"><img src="https://wobqqq.github.io/zatyazhnoy-pryzhok/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Затяжной прыжок</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Реалистичный затяжной прыжок: кольца, девять трюков и групповые прыжки, 300 прыжков над 10 зонами — от летнего луга до стратосферы.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.skydivehero.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.skydivehero.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#b22222">
-  <a class="head" href="https://wobqqq.github.io/stalnoy-front/"><img src="https://wobqqq.github.io/stalnoy-front/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Стальной фронт</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/stalnoy-front/"><img src="https://wobqqq.github.io/stalnoy-front/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Стальной фронт</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.steelfront.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.steelfront.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/stalnoy-front/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#1f4d3a">
-  <a class="head" href="https://wobqqq.github.io/sortirovochnaya/"><img src="https://wobqqq.github.io/sortirovochnaya/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Сортировочная</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/sortirovochnaya/"><img src="https://wobqqq.github.io/sortirovochnaya/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Сортировочная</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Головоломка про советскую железную дорогу: собери поезд по натурному листу, 300 составов в шести эпохах, от паровозов до ЭР200.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sortingyard.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119630507">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/sortirovochnaya/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#4e7a34">
-  <a class="head" href="https://wobqqq.github.io/tihaya-ohota/"><img src="https://wobqqq.github.io/tihaya-ohota/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Тихая Охота</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/tihaya-ohota/"><img src="https://wobqqq.github.io/tihaya-ohota/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Тихая Охота</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Уютная грибная головоломка: собирай настоящие грибы лесов России и Беларуси в корзину и не перепутай с ядовитыми двойниками. 300 полян, 150 видов и справочник грибника.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tihayaohota.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.tihayaohota.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/tihaya-ohota/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#7a1f2b">
-  <a class="head" href="https://wobqqq.github.io/peremotka-90/"><img src="https://wobqqq.github.io/peremotka-90/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Перемотка девяностых</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/peremotka-90/"><img src="https://wobqqq.github.io/peremotka-90/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Перемотка девяностых</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Ламповая ASMR-головоломка из 90-х: распутай зажёванную плёнку, смотай её карандашом и включи магнитофон. 300 кассет и своя музыка в духе 90-х.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.rewind90s.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.rewind90s.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/peremotka-90/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#5b4bb8">
-  <a class="head" href="https://wobqqq.github.io/kot-na-klave/"><img src="https://wobqqq.github.io/kot-na-klave/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Кот на клаве</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/kot-na-klave/"><img src="https://wobqqq.github.io/kot-na-klave/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Кот на клаве</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Уютная головоломка: пушистый кот уснул на клавиатуре — уложи его лапки и перенеси на подушку, не разбудив. 300 уровней, 40 окрасов и десятки клавиатур.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.catonkeyboard.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.catonkeyboard.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kot-na-klave/privacy.html">Конфиденциальность</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#e2b45a">
-  <a class="head" href="https://wobqqq.github.io/klass-13/"><img src="https://wobqqq.github.io/klass-13/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Класс №13</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/klass-13/"><img src="https://wobqqq.github.io/klass-13/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Класс №13</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.classroom13.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.classroom13.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/klass-13/privacy.html">Конфиденциальность</a></div>
 </li>
-<li class="card" data-p="android" style="--c:#c8743a">
-  <a class="head" href="https://wobqqq.github.io/banny-den/"><img src="https://wobqqq.github.io/banny-den/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Банный день</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bathhousemaster.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.bathhousemaster.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/banny-den/privacy.html">Конфиденциальность</a></div>
-</li>
 <li class="card" data-p="android" style="--c:#2fa37f">
-  <a class="head" href="https://wobqqq.github.io/lift-v-panelke/"><img src="https://wobqqq.github.io/lift-v-panelke/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>Лифт в панельке</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/lift-v-panelke/"><img src="https://wobqqq.github.io/lift-v-panelke/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Лифт в панельке</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>Головоломка про лифтёра панельки: развези соседей по этажам, следи за весами и не перегрузи старый лифт. 300 уровней, до 16 этажей и четырёх подъездов, баба Зина с рассадой и поломки «ЖЭК-хардкор».</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.panelhouselift.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.panelhouselift.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/lift-v-panelke/privacy.html">Конфиденциальность</a></div>
 </li>
-<li class="card" data-p="android" style="--c:#c0603a">
-  <a class="head" href="https://wobqqq.github.io/po-pogode/"><img src="https://wobqqq.github.io/po-pogode/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>По погоде</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.weatherdressup.game">Скачать в RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.weatherdressup.game">Скачать в AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/po-pogode/privacy.html">Конфиденциальность</a></div>
-</li>
 </ul>
-<div class="more" aria-hidden="true"></div>
+<nav class="pager" aria-label="Страницы" data-prev="Предыдущая страница" data-next="Следующая страница" hidden></nav>
 <section class="features">
   <div class="feature"><i>📴</i><b>Без интернета</b><span>Все игры работают офлайн.</span></div>
   <div class="feature"><i>🙅</i><b>Без регистрации</b><span>Никаких аккаунтов и паролей.</span></div>
@@ -299,18 +309,55 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
 <script>
 (function () {
   var cards = Array.prototype.slice.call(document.querySelectorAll('.grid > li'));
-  var more = document.querySelector('.more');
-  var size = 24, shown = 0;
-  if (cards.length <= size || !('IntersectionObserver' in window)) return;
-  cards.forEach(function (c) { c.hidden = true; });
-  function next() {
-    cards.slice(shown, shown + size).forEach(function (c) { c.hidden = false; });
-    shown += size;
-    if (shown >= cards.length) io.disconnect();
+  var nav = document.querySelector('.pager');
+  var grid = document.querySelector('.grid');
+  var size = 24, pages = Math.ceil(cards.length / size);
+  if (pages < 2) return;
+  var label = nav.dataset;
+  function current() {
+    var m = /^#page-(\d+)$/.exec(location.hash);
+    var n = m ? parseInt(m[1], 10) : 1;
+    return Math.min(Math.max(n, 1), pages);
   }
-  var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) next(); }, {rootMargin: '400px'});
-  next();
-  io.observe(more);
+  function list(cur) {
+    // 1 … 4 5 6 … 12: first, last and two around the current one.
+    var out = [], last = 0;
+    for (var i = 1; i <= pages; i++) {
+      if (i === 1 || i === pages || Math.abs(i - cur) <= 1 || pages <= 7) {
+        if (last && i - last > 1) out.push(0);
+        out.push(i); last = i;
+      }
+    }
+    return out;
+  }
+  function button(text, n, cur, aria) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = text;
+    if (aria) b.setAttribute('aria-label', aria);
+    if (n === cur && !aria) b.setAttribute('aria-current', 'page');
+    if (n < 1 || n > pages || (aria && n === cur)) b.disabled = true;
+    b.addEventListener('click', function () { go(n, true); });
+    return b;
+  }
+  function render(cur) {
+    cards.forEach(function (c, i) { c.hidden = Math.floor(i / size) + 1 !== cur; });
+    nav.textContent = '';
+    nav.appendChild(button('‹', cur - 1, cur, label.prev));
+    list(cur).forEach(function (n) {
+      if (n) { nav.appendChild(button(String(n), n, cur)); }
+      else { var s = document.createElement('span'); s.className = 'gap'; s.textContent = '…'; nav.appendChild(s); }
+    });
+    nav.appendChild(button('›', cur + 1, cur, label.next));
+    nav.hidden = false;
+  }
+  function go(n, scroll) {
+    var hash = n === 1 ? '' : '#page-' + n;
+    if (location.hash !== hash) history.pushState(null, '', hash || location.pathname + location.search);
+    render(n);
+    if (scroll) grid.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+  window.addEventListener('popstate', function () { render(current()); });
+  render(current());
 })();
 </script>
 <script>document.querySelectorAll(".year").forEach(function (e) { e.textContent = new Date().getFullYear(); });</script>

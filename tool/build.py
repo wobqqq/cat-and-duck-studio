@@ -31,6 +31,14 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('po-pogode', 'game', {
+        'ru': ('По погоде', 'Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.'),
+        'en': ('Weather Dress Up', 'A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.')},
+     'https://www.rustore.ru/catalog/app/com.weatherdressup.game', '#c0603a'),
+    ('banny-den', 'game', {
+        'ru': ('Банный день', 'Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.'),
+        'en': ('Bathhouse Master', 'A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar\'s bathhouse.')},
+     'https://www.rustore.ru/catalog/app/com.bathhousemaster.game', '#c8743a'),
     ('bag-of-bags', 'game', {
         'ru': ('Пакет с пакетами', 'Сложи все пакеты в один: складывай, поворачивай, вкладывай. 240 уровней.'),
         'en': ('Bag of Bags', 'Fit every bag into one bag: fold, turn and nest. 240 levels.')},
@@ -115,18 +123,10 @@ GAMES = [
         'ru': ('Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
         'en': ('Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},
      'https://www.rustore.ru/catalog/app/com.classroom13.game', '#e2b45a'),
-    ('banny-den', 'game', {
-        'ru': ('Банный день', 'Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.'),
-        'en': ('Bathhouse Master', 'A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar\'s bathhouse.')},
-     'https://www.rustore.ru/catalog/app/com.bathhousemaster.game', '#c8743a'),
     ('lift-v-panelke', 'game', {
         'ru': ('Лифт в панельке', 'Головоломка про лифтёра панельки: развези соседей по этажам, следи за весами и не перегрузи старый лифт. 300 уровней, до 16 этажей и четырёх подъездов, баба Зина с рассадой и поломки «ЖЭК-хардкор».'),
         'en': ('Panel House Lift', 'A lift operator puzzle in a Soviet panel block: take the neighbours to their floors, watch the weight needle and never overload the old lift. 300 levels, up to 16 floors and four entrances, Granny Zina with her seedlings and plenty of breakdowns.')},
      'https://www.rustore.ru/catalog/app/com.panelhouselift.game', '#2fa37f'),
-    ('po-pogode', 'game', {
-        'ru': ('По погоде', 'Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.'),
-        'en': ('Weather Dress Up', 'A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.')},
-     'https://www.rustore.ru/catalog/app/com.weatherdressup.game', '#c0603a'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);
@@ -162,6 +162,7 @@ T = {
         'contact': 'Связаться с нами',
         'game': 'Игра', 'count': 'игр',
         'empty': 'Здесь пока пусто — но скоро будет.',
+        'pages': 'Страницы', 'prev': 'Предыдущая страница', 'next': 'Следующая страница',
     },
     'en': {
         'title': 'Cat & Duck Studio — cozy games and apps',
@@ -180,6 +181,7 @@ T = {
         'contact': 'Contact us',
         'game': 'Game', 'count': 'games',
         'empty': 'Nothing here yet — but soon.',
+        'pages': 'Pages', 'prev': 'Previous page', 'next': 'Next page',
     },
 }
 
@@ -225,24 +227,30 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .tabs { display: flex; gap: 6px; background: var(--chip); padding: 4px; border-radius: 999px; }
 .tabs button { border: 0; background: transparent; color: var(--soft); font: inherit; font-size: 15px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer; }
 .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 0 var(--edge); }
-.grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
-.card { position: relative; background: var(--card); border-radius: 24px; padding: 18px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; transition: transform .18s ease, box-shadow .18s ease; }
-.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 72px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .22; pointer-events: none; }
+.grid { scroll-margin-top: 16px; list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.card { position: relative; min-width: 0; background: var(--card); border-radius: 24px; padding: 20px 16px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; text-align: center; transition: transform .18s ease, box-shadow .18s ease; }
+.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 96px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .24; pointer-events: none; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 2px 0 var(--edge), 0 18px 32px rgba(90, 55, 20, .14); }
-.card .head { position: relative; display: flex; gap: 14px; align-items: center; color: var(--ink); text-decoration: none; }
-.card img { width: 76px; height: 76px; border-radius: 20px; flex: none; box-shadow: 0 4px 10px rgba(90, 55, 20, .18); }
-.card .head > div { min-width: 0; flex: 1; padding-right: 4px; }
-.card h3 { margin: 0; font-size: 18px; line-height: 1.2; font-weight: 800; overflow-wrap: break-word; }
-.more { height: 1px; }
-.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+.card .head { position: relative; display: flex; flex-direction: column; gap: 10px; align-items: center; color: var(--ink); text-decoration: none; }
+.card img { display: block; width: 96px; height: 96px; border-radius: 24px; flex: none; box-shadow: 0 6px 14px rgba(90, 55, 20, .2); background: var(--chip); }
+.card .head > div { min-width: 0; width: 100%; }
+.card h3 { margin: 0; font-size: 18px; line-height: 1.22; font-weight: 800; overflow-wrap: break-word; text-wrap: balance; min-height: 2.44em; display: flex; align-items: center; justify-content: center; }
+.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; justify-content: center; }
 .badge { font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--soft); }
 .badge.soon { opacity: .75; }
-.card p { margin: 0; color: var(--soft); font-size: 15px; flex: 1; }
-.card .actions { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
-.btn { display: inline-flex; align-items: center; justify-content: center; padding: 9px 14px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; text-decoration: none; }
-.card .stores { display: flex; gap: 8px; flex-wrap: wrap; }
+.card p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.45; flex: 1; overflow-wrap: break-word; text-wrap: pretty; }
+.card .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+.btn { display: flex; align-items: center; justify-content: center; text-align: center; padding: 9px 12px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; line-height: 1.25; text-decoration: none; }
+.btn:hover { filter: brightness(1.08); }
+.card .stores { display: flex; flex-direction: column; gap: 8px; }
 .btn.ghost { background: var(--chip); color: var(--ink); }
 .card .legal { font-size: 13px; color: var(--soft); }
+.pager { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin: 28px 0 0; }
+.pager button { min-width: 42px; height: 42px; padding: 0 12px; border: 0; border-radius: 14px; background: var(--card); color: var(--ink); font: inherit; font-size: 16px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 0 var(--edge); }
+.pager button:hover:not(:disabled) { color: var(--accent); }
+.pager button[aria-current="page"] { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
+.pager button:disabled { opacity: .4; cursor: default; }
+.pager .gap { color: var(--soft); padding: 0 4px; font-weight: 800; }
 .card.web { border: 2px dashed var(--edge); background: transparent; box-shadow: none; justify-content: center; text-align: center; align-items: center; min-height: 200px; }
 .card.web p { flex: none; }
 .card.web::before { display: none; }
@@ -267,8 +275,12 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
   .features { grid-template-columns: 1fr; }
   .bar h2 { font-size: 24px; }
 }
-@media (max-width: 420px) {
-  .grid { grid-template-columns: 1fr; }
+@media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+@media (max-width: 520px) {
+  .grid { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 18px 16px 16px; }
+  .card h3 { min-height: 0; }
 }
 '''
 
@@ -292,24 +304,62 @@ JS = '''
 '''
 
 
-# Infinite scroll: every tile is in the HTML (search engines, no JS), the page
-# shows PAGE_SIZE of them and reveals the next PAGE_SIZE as the end comes into view.
+# Numbered pages: every tile is in the HTML (search engines, no JS), the script
+# shows PAGE_SIZE of them per page with a 1 2 3 … pager under the grid; the page
+# number lives in the URL hash (#page-2), so back/forward and shared links work.
 PAGE_SIZE = 24
 PAGER = '''
 (function () {
   var cards = Array.prototype.slice.call(document.querySelectorAll('.grid > li'));
-  var more = document.querySelector('.more');
-  var size = %d, shown = 0;
-  if (cards.length <= size || !('IntersectionObserver' in window)) return;
-  cards.forEach(function (c) { c.hidden = true; });
-  function next() {
-    cards.slice(shown, shown + size).forEach(function (c) { c.hidden = false; });
-    shown += size;
-    if (shown >= cards.length) io.disconnect();
+  var nav = document.querySelector('.pager');
+  var grid = document.querySelector('.grid');
+  var size = %d, pages = Math.ceil(cards.length / size);
+  if (pages < 2) return;
+  var label = nav.dataset;
+  function current() {
+    var m = /^#page-(\\d+)$/.exec(location.hash);
+    var n = m ? parseInt(m[1], 10) : 1;
+    return Math.min(Math.max(n, 1), pages);
   }
-  var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) next(); }, {rootMargin: '400px'});
-  next();
-  io.observe(more);
+  function list(cur) {
+    // 1 … 4 5 6 … 12: first, last and two around the current one.
+    var out = [], last = 0;
+    for (var i = 1; i <= pages; i++) {
+      if (i === 1 || i === pages || Math.abs(i - cur) <= 1 || pages <= 7) {
+        if (last && i - last > 1) out.push(0);
+        out.push(i); last = i;
+      }
+    }
+    return out;
+  }
+  function button(text, n, cur, aria) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.textContent = text;
+    if (aria) b.setAttribute('aria-label', aria);
+    if (n === cur && !aria) b.setAttribute('aria-current', 'page');
+    if (n < 1 || n > pages || (aria && n === cur)) b.disabled = true;
+    b.addEventListener('click', function () { go(n, true); });
+    return b;
+  }
+  function render(cur) {
+    cards.forEach(function (c, i) { c.hidden = Math.floor(i / size) + 1 !== cur; });
+    nav.textContent = '';
+    nav.appendChild(button('‹', cur - 1, cur, label.prev));
+    list(cur).forEach(function (n) {
+      if (n) { nav.appendChild(button(String(n), n, cur)); }
+      else { var s = document.createElement('span'); s.className = 'gap'; s.textContent = '…'; nav.appendChild(s); }
+    });
+    nav.appendChild(button('›', cur + 1, cur, label.next));
+    nav.hidden = false;
+  }
+  function go(n, scroll) {
+    var hash = n === 1 ? '' : '#page-' + n;
+    if (location.hash !== hash) history.pushState(null, '', hash || location.pathname + location.search);
+    render(n);
+    if (scroll) grid.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+  window.addEventListener('popstate', function () { render(current()); });
+  render(current());
 })();
 ''' % PAGE_SIZE
 
@@ -332,7 +382,7 @@ def page(lang):
         # AppGallery button on every game, even before the game is published there (owner, 2026-10-17).
         gallery = APPGALLERY.get(slug, 'https://appgallery.huawei.com/app/detail?id=' + store.rsplit('/', 1)[1])
         cards.append(f'''<li class="card" data-p="android" style="--c:{color}">
-  <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="76" height="76" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>{text}</p>
   <div class="actions"><span class="stores"><a class="btn" href="{store}">{t['store']}</a><a class="btn" href="{gallery}">{t['gallery']}</a></span><a class="legal" href="{games}{slug}/{priv}">{t['privacy']}</a></div>
 </li>''')
@@ -381,7 +431,7 @@ def page(lang):
 <ul class="grid">
 {chr(10).join(cards)}
 </ul>
-<div class="more" aria-hidden="true"></div>
+<nav class="pager" aria-label="{t['pages']}" data-prev="{t['prev']}" data-next="{t['next']}" hidden></nav>
 <section class="features">
   <div class="feature"><i>📴</i><b>{t['f1'][0]}</b><span>{t['f1'][1]}</span></div>
   <div class="feature"><i>🙅</i><b>{t['f2'][0]}</b><span>{t['f2'][1]}</span></div>

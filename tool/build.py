@@ -251,7 +251,7 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .card .legal { font-size: 13px; color: var(--soft); }
 .pager { display: flex; justify-content: center; align-items: center; gap: 6px; flex-wrap: wrap; margin: 28px 0 0; }
 .pager button { min-width: 42px; height: 42px; padding: 0 12px; border: 0; border-radius: 14px; background: var(--card); color: var(--ink); font: inherit; font-size: 16px; font-weight: 800; cursor: pointer; box-shadow: 0 2px 0 var(--edge); }
-.pager button:hover:not(:disabled) { color: var(--accent); }
+.pager button:hover:not(:disabled):not([aria-current="page"]) { color: var(--accent); background: var(--chip); }
 .pager button[aria-current="page"] { background: var(--accent); color: var(--accent-ink); box-shadow: none; }
 .pager button:disabled { opacity: .4; cursor: default; }
 .pager .gap { color: var(--soft); padding: 0 4px; font-weight: 800; }

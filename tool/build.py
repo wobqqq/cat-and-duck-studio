@@ -310,7 +310,7 @@ JS = '''
 # Numbered pages: every tile is in the HTML (search engines, no JS), the script
 # shows PAGE_SIZE of them per page with a 1 2 3 … pager under the grid; the page
 # number lives in the URL hash (#page-2), so back/forward and shared links work.
-PAGE_SIZE = 24
+PAGE_SIZE = 36
 PAGER = '''
 (function () {
   var cards = Array.prototype.slice.call(document.querySelectorAll('.grid > li'));

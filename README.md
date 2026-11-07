@@ -31,3 +31,4 @@
 | 🧖 | [Bathhouse Master](https://wobqqq.github.io/banny-den/en/) |
 | 🔦 | [Classroom 13](https://wobqqq.github.io/klass-13/en/) |
 | 🛗 | [Panel House Lift](https://wobqqq.github.io/lift-v-panelke/en/) |
+| 🧣 | [Weather Dress Up](https://wobqqq.github.io/po-pogode/en/) |

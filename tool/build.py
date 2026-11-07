@@ -123,6 +123,10 @@ GAMES = [
         'ru': ('Лифт в панельке', 'Головоломка про лифтёра панельки: развези соседей по этажам, следи за весами и не перегрузи старый лифт. 300 уровней, до 16 этажей и четырёх подъездов, баба Зина с рассадой и поломки «ЖЭК-хардкор».'),
         'en': ('Panel House Lift', 'A lift operator puzzle in a Soviet panel block: take the neighbours to their floors, watch the weight needle and never overload the old lift. 300 levels, up to 16 floors and four entrances, Granny Zina with her seedlings and plenty of breakdowns.')},
      'https://www.rustore.ru/catalog/app/com.panelhouselift.game', '#2fa37f'),
+    ('po-pogode', 'game', {
+        'ru': ('По погоде', 'Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.'),
+        'en': ('Weather Dress Up', 'A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.')},
+     'https://www.rustore.ru/catalog/app/com.weatherdressup.game', '#c0603a'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

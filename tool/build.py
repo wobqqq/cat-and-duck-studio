@@ -55,6 +55,10 @@ GAMES = [
         'ru': ('По погоде', 'Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.'),
         'en': ('Weather Dress Up', 'A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.')},
      'https://www.rustore.ru/catalog/app/com.weatherdressup.game', '#c0603a'),
+    ('garazh-deda', 'game', {
+        'ru': ('Гараж деда', 'Уютная головоломка: разложи дедовский хлам по полкам так, чтобы всё влезло — банки в ряд, ключи от большого к малому, тяжёлое вниз. 300 уровней в шести местах и 150 вещей.'),
+        'en': ('Grandpa’s Garage', 'A cosy puzzle: sort grandpa\'s junk onto his shelves so everything fits: jars in a row, wrenches big to small, heavy things low. 300 levels in six places and 150 things.')},
+     'https://www.rustore.ru/catalog/app/com.grandpasgarage.game', '#5e6b3a'),
     ('banny-den', 'game', {
         'ru': ('Банный день', 'Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.'),
         'en': ('Bathhouse Master', 'A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar\'s bathhouse.')},

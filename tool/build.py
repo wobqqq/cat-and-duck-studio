@@ -31,6 +31,26 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('stalnoy-front', 'game', {
+        'ru': ('Стальной фронт', 'Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.'),
+        'en': ('Steel Front', 'A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.')},
+     'https://www.rustore.ru/catalog/app/com.steelfront.game', '#b22222'),
+    ('klass-13', 'game', {
+        'ru': ('Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
+        'en': ('Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},
+     'https://www.rustore.ru/catalog/app/com.classroom13.game', '#e2b45a'),
+    ('peremotka-90', 'game', {
+        'ru': ('Перемотка девяностых', 'Ламповая ASMR-головоломка из 90-х: распутай зажёванную плёнку, смотай её карандашом и включи магнитофон. 300 кассет и своя музыка в духе 90-х.'),
+        'en': ('90s Rewind', 'A cozy 90s ASMR puzzle: untangle the chewed tape, wind it back with a pencil and press Play. 300 cassettes and original 90s-style music.')},
+     'https://www.rustore.ru/catalog/app/com.rewind90s.game', '#7a1f2b'),
+    ('kot-na-klave', 'game', {
+        'ru': ('Кот на клаве', 'Уютная головоломка: пушистый кот уснул на клавиатуре — уложи его лапки и перенеси на подушку, не разбудив. 300 уровней, 40 окрасов и десятки клавиатур.'),
+        'en': ('Cat on Keyboard', 'A cosy puzzle: a fluffy cat fell asleep on your keyboard. Fold its paws and carry it to a cushion without waking it. 300 levels, 40 coats and dozens of keyboards.')},
+     'https://www.rustore.ru/catalog/app/com.catonkeyboard.game', '#5b4bb8'),
+    ('lift-v-panelke', 'game', {
+        'ru': ('Лифт в панельке', 'Головоломка про лифтёра панельки: развези соседей по этажам, следи за весами и не перегрузи старый лифт. 300 уровней, до 16 этажей и четырёх подъездов, баба Зина с рассадой и поломки «ЖЭК-хардкор».'),
+        'en': ('Panel House Lift', 'A lift operator puzzle in a Soviet panel block: take the neighbours to their floors, watch the weight needle and never overload the old lift. 300 levels, up to 16 floors and four entrances, Granny Zina with her seedlings and plenty of breakdowns.')},
+     'https://www.rustore.ru/catalog/app/com.panelhouselift.game', '#2fa37f'),
     ('po-pogode', 'game', {
         'ru': ('По погоде', 'Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.'),
         'en': ('Weather Dress Up', 'A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.')},
@@ -99,10 +119,6 @@ GAMES = [
         'ru': ('Затяжной прыжок', 'Реалистичный затяжной прыжок: кольца, девять трюков и групповые прыжки, 300 прыжков над 10 зонами — от летнего луга до стратосферы.'),
         'en': ('Skydive Hero', 'A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.')},
      'https://www.rustore.ru/catalog/app/com.skydivehero.game', '#38c6f4'),
-    ('stalnoy-front', 'game', {
-        'ru': ('Стальной фронт', 'Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.'),
-        'en': ('Steel Front', 'A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.')},
-     'https://www.rustore.ru/catalog/app/com.steelfront.game', '#b22222'),
     ('sortirovochnaya', 'game', {
         'ru': ('Сортировочная', 'Головоломка про советскую железную дорогу: собери поезд по натурному листу, 300 составов в шести эпохах, от паровозов до ЭР200.'),
         'en': ('Sorting Yard', 'A Soviet railway puzzle: build the train by the waybill, 300 trains over six eras, from steam to the ER200.')},
@@ -111,22 +127,6 @@ GAMES = [
         'ru': ('Тихая Охота', 'Уютная грибная головоломка: собирай настоящие грибы лесов России и Беларуси в корзину и не перепутай с ядовитыми двойниками. 300 полян, 150 видов и справочник грибника.'),
         'en': ('Mushroom Picker', 'A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 150 species and a mushroom guide.')},
      'https://www.rustore.ru/catalog/app/com.tihayaohota.game', '#4e7a34'),
-    ('peremotka-90', 'game', {
-        'ru': ('Перемотка девяностых', 'Ламповая ASMR-головоломка из 90-х: распутай зажёванную плёнку, смотай её карандашом и включи магнитофон. 300 кассет и своя музыка в духе 90-х.'),
-        'en': ('90s Rewind', 'A cozy 90s ASMR puzzle: untangle the chewed tape, wind it back with a pencil and press Play. 300 cassettes and original 90s-style music.')},
-     'https://www.rustore.ru/catalog/app/com.rewind90s.game', '#7a1f2b'),
-    ('kot-na-klave', 'game', {
-        'ru': ('Кот на клаве', 'Уютная головоломка: пушистый кот уснул на клавиатуре — уложи его лапки и перенеси на подушку, не разбудив. 300 уровней, 40 окрасов и десятки клавиатур.'),
-        'en': ('Cat on Keyboard', 'A cosy puzzle: a fluffy cat fell asleep on your keyboard. Fold its paws and carry it to a cushion without waking it. 300 levels, 40 coats and dozens of keyboards.')},
-     'https://www.rustore.ru/catalog/app/com.catonkeyboard.game', '#5b4bb8'),
-    ('klass-13', 'game', {
-        'ru': ('Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
-        'en': ('Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},
-     'https://www.rustore.ru/catalog/app/com.classroom13.game', '#e2b45a'),
-    ('lift-v-panelke', 'game', {
-        'ru': ('Лифт в панельке', 'Головоломка про лифтёра панельки: развези соседей по этажам, следи за весами и не перегрузи старый лифт. 300 уровней, до 16 этажей и четырёх подъездов, баба Зина с рассадой и поломки «ЖЭК-хардкор».'),
-        'en': ('Panel House Lift', 'A lift operator puzzle in a Soviet panel block: take the neighbours to their floors, watch the weight needle and never overload the old lift. 300 levels, up to 16 floors and four entrances, Granny Zina with her seedlings and plenty of breakdowns.')},
-     'https://www.rustore.ru/catalog/app/com.panelhouselift.game', '#2fa37f'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);
@@ -228,18 +228,18 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .tabs button { border: 0; background: transparent; color: var(--soft); font: inherit; font-size: 15px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer; }
 .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 0 var(--edge); }
 .grid { scroll-margin-top: 16px; list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.card { position: relative; min-width: 0; background: var(--card); border-radius: 24px; padding: 20px 16px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; text-align: center; transition: transform .18s ease, box-shadow .18s ease; }
-.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 96px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .24; pointer-events: none; }
+.card { position: relative; min-width: 0; background: var(--card); border-radius: 24px; padding: 18px 16px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; transition: transform .18s ease, box-shadow .18s ease; }
+.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 80px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .24; pointer-events: none; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 2px 0 var(--edge), 0 18px 32px rgba(90, 55, 20, .14); }
-.card .head { position: relative; display: flex; flex-direction: column; gap: 10px; align-items: center; color: var(--ink); text-decoration: none; }
-.card img { display: block; width: 96px; height: 96px; border-radius: 24px; flex: none; box-shadow: 0 6px 14px rgba(90, 55, 20, .2); background: var(--chip); }
-.card .head > div { min-width: 0; width: 100%; }
-.card h3 { margin: 0; font-size: 18px; line-height: 1.22; font-weight: 800; overflow-wrap: break-word; text-wrap: balance; min-height: 2.44em; display: flex; align-items: center; justify-content: center; }
-.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; justify-content: center; }
+.card .head { position: relative; display: flex; gap: 12px; align-items: center; color: var(--ink); text-decoration: none; }
+.card img { display: block; width: 72px; height: 72px; border-radius: 18px; flex: none; box-shadow: 0 6px 14px rgba(90, 55, 20, .2); background: var(--chip); }
+.card .head > div { min-width: 0; flex: 1; }
+.card h3 { margin: 0; font-size: 18px; line-height: 1.22; font-weight: 800; overflow-wrap: break-word; text-wrap: pretty; }
+.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
 .badge { font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--soft); }
 .badge.soon { opacity: .75; }
 .card p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.45; flex: 1; overflow-wrap: break-word; text-wrap: pretty; }
-.card .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+.card .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; text-align: center; }
 .btn { display: flex; align-items: center; justify-content: center; text-align: center; padding: 9px 12px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; line-height: 1.25; text-decoration: none; }
 .btn:hover { filter: brightness(1.08); }
 .card .stores { display: flex; flex-direction: column; gap: 8px; }
@@ -280,7 +280,6 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
 @media (max-width: 520px) {
   .grid { grid-template-columns: minmax(0, 1fr); }
   .card { padding: 18px 16px 16px; }
-  .card h3 { min-height: 0; }
 }
 '''
 
@@ -382,7 +381,7 @@ def page(lang):
         # AppGallery button on every game, even before the game is published there (owner, 2026-10-17).
         gallery = APPGALLERY.get(slug, 'https://appgallery.huawei.com/app/detail?id=' + store.rsplit('/', 1)[1])
         cards.append(f'''<li class="card" data-p="android" style="--c:{color}">
-  <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="{games}{slug}/{home}"><img src="{games}{slug}/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>{name}</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>{text}</p>
   <div class="actions"><span class="stores"><a class="btn" href="{store}">{t['store']}</a><a class="btn" href="{gallery}">{t['gallery']}</a></span><a class="legal" href="{games}{slug}/{priv}">{t['privacy']}</a></div>
 </li>''')

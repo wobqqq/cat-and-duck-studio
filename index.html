@@ -62,18 +62,18 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .tabs button { border: 0; background: transparent; color: var(--soft); font: inherit; font-size: 15px; font-weight: 700; padding: 7px 14px; border-radius: 999px; cursor: pointer; }
 .tabs button[aria-pressed="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 0 var(--edge); }
 .grid { scroll-margin-top: 16px; list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-.card { position: relative; min-width: 0; background: var(--card); border-radius: 24px; padding: 20px 16px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; text-align: center; transition: transform .18s ease, box-shadow .18s ease; }
-.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 96px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .24; pointer-events: none; }
+.card { position: relative; min-width: 0; background: var(--card); border-radius: 24px; padding: 18px 16px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 12px; transition: transform .18s ease, box-shadow .18s ease; }
+.card::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 80px; border-radius: 24px 24px 0 0; background: linear-gradient(180deg, var(--c), transparent); opacity: .24; pointer-events: none; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 2px 0 var(--edge), 0 18px 32px rgba(90, 55, 20, .14); }
-.card .head { position: relative; display: flex; flex-direction: column; gap: 10px; align-items: center; color: var(--ink); text-decoration: none; }
-.card img { display: block; width: 96px; height: 96px; border-radius: 24px; flex: none; box-shadow: 0 6px 14px rgba(90, 55, 20, .2); background: var(--chip); }
-.card .head > div { min-width: 0; width: 100%; }
-.card h3 { margin: 0; font-size: 18px; line-height: 1.22; font-weight: 800; overflow-wrap: break-word; text-wrap: balance; min-height: 2.44em; display: flex; align-items: center; justify-content: center; }
-.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; justify-content: center; }
+.card .head { position: relative; display: flex; gap: 12px; align-items: center; color: var(--ink); text-decoration: none; }
+.card img { display: block; width: 72px; height: 72px; border-radius: 18px; flex: none; box-shadow: 0 6px 14px rgba(90, 55, 20, .2); background: var(--chip); }
+.card .head > div { min-width: 0; flex: 1; }
+.card h3 { margin: 0; font-size: 18px; line-height: 1.22; font-weight: 800; overflow-wrap: break-word; text-wrap: pretty; }
+.card .badges { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
 .badge { font-size: 12px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--chip); color: var(--soft); }
 .badge.soon { opacity: .75; }
 .card p { margin: 0; color: var(--soft); font-size: 15px; line-height: 1.45; flex: 1; overflow-wrap: break-word; text-wrap: pretty; }
-.card .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; }
+.card .actions { display: flex; flex-direction: column; gap: 10px; align-items: stretch; text-align: center; }
 .btn { display: flex; align-items: center; justify-content: center; text-align: center; padding: 9px 12px; border-radius: 14px; background: var(--accent); color: var(--accent-ink); font-weight: 800; font-size: 14px; line-height: 1.25; text-decoration: none; }
 .btn:hover { filter: brightness(1.08); }
 .card .stores { display: flex; flex-direction: column; gap: 8px; }
@@ -114,7 +114,6 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
 @media (max-width: 520px) {
   .grid { grid-template-columns: minmax(0, 1fr); }
   .card { padding: 18px 16px 16px; }
-  .card h3 { min-height: 0; }
 }
 </style>
 </head>
@@ -176,125 +175,125 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
 <main>
 <div class="bar"><h2>Games</h2></div>
 <ul class="grid">
-<li class="card" data-p="android" style="--c:#c0603a">
-  <a class="head" href="https://wobqqq.github.io/po-pogode/en/"><img src="https://wobqqq.github.io/po-pogode/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Weather Dress Up</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.weatherdressup.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.weatherdressup.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/po-pogode/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#c8743a">
-  <a class="head" href="https://wobqqq.github.io/banny-den/en/"><img src="https://wobqqq.github.io/banny-den/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Bathhouse Master</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar's bathhouse.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bathhousemaster.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.bathhousemaster.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/banny-den/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#ffd25a">
-  <a class="head" href="https://wobqqq.github.io/bag-of-bags/en/"><img src="https://wobqqq.github.io/bag-of-bags/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Bag of Bags</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Fit every bag into one bag: fold, turn and nest. 240 levels.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bagofbags.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427897">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/bag-of-bags/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#f6b93b">
-  <a class="head" href="https://wobqqq.github.io/zakatki/en/"><img src="https://wobqqq.github.io/zakatki/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Pickle Sort</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Sort pickles, tomatoes and jam into jars and seal the lid. 1000 levels.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.picklesort.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428039">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/zakatki/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#ff8a3d">
-  <a class="head" href="https://wobqqq.github.io/kto-menya-zaper/en/"><img src="https://wobqqq.github.io/kto-menya-zaper/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Who Blocked Me?</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Get every car out of the yard without a scratch. 300 levels.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.whoblockedme.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427693">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kto-menya-zaper/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#5b9a3c">
-  <a class="head" href="https://wobqqq.github.io/dacha/en/"><img src="https://wobqqq.github.io/dacha/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>My Dacha</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Plant, harvest, sell: garden beds, a greenhouse, hens and a cat on the porch.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.mydacha.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427941">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/dacha/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#c0392b">
-  <a class="head" href="https://wobqqq.github.io/skanvordy/en/"><img src="https://wobqqq.github.io/skanvordy/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Cozy Scanwords and Word Search</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Arrow-word puzzles and word searches for every day, large letters.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.scanwordgames.words">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427985">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#d3263a">
-  <a class="head" href="https://wobqqq.github.io/dveri-zakryvayutsya/en/"><img src="https://wobqqq.github.io/dveri-zakryvayutsya/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Mind the Doors!</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>The train is pulling in: get the passengers to the doors. 300 stations.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.mindthedoors.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428067">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/dveri-zakryvayutsya/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#14a38b">
-  <a class="head" href="https://wobqqq.github.io/fabrika-ulybok/en/"><img src="https://wobqqq.github.io/fabrika-ulybok/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Smile Factory</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Build the perfect smile from puzzle teeth: bump into dent, tooth into gap. 300 levels.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.smilefactory.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428149">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/fabrika-ulybok/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#3e8fd8">
-  <a class="head" href="https://wobqqq.github.io/kholodilnik-po-polochkam/en/"><img src="https://wobqqq.github.io/kholodilnik-po-polochkam/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Tidy Fridge</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Put the groceries away: one kind per shelf, no gaps, spoiled food in the bin. 300 levels.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tidyfridge.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428199">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kholodilnik-po-polochkam/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#ff6f91">
-  <a class="head" href="https://wobqqq.github.io/florist/en/"><img src="https://wobqqq.github.io/florist/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Florist</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Turn the stems until every flower reaches the ribbon, and the bouquet blooms. 40 bouquets to collect.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.florist.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.florist.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/florist/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#d42a1f">
-  <a class="head" href="https://wobqqq.github.io/skanvordy-sssr/en/"><img src="https://wobqqq.github.io/skanvordy-sssr/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Scanwords from the USSR</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Scanwords and word searches about everyday Soviet life: films, cartoons, the grocery, space.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sovietscanwords.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119605979">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy-sssr/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#8e1f4f">
-  <a class="head" href="https://wobqqq.github.io/skanvordy-18/en/"><img src="https://wobqqq.github.io/skanvordy-18/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Scanwords for Adults</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Scanwords and word searches 18+ with cheeky clues: flirting, bars, casino. Hosted by Madame Rosa.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.adultscanwords.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.adultscanwords.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy-18/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#ff6fae">
-  <a class="head" href="https://wobqqq.github.io/slova-otaku/en/"><img src="https://wobqqq.github.io/slova-otaku/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Otaku Words</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Anime word search: find words from your favourite shows and otaku culture with Yuki the fox girl.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.otakuwords.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.otakuwords.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/slova-otaku/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#f2c230">
-  <a class="head" href="https://wobqqq.github.io/kanalizatsiya/en/"><img src="https://wobqqq.github.io/kanalizatsiya/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Sewer Pipes</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Turn the pipes so the water runs into the sewer and the green chemicals into their own drain. A plumber rat and graffiti.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sewerpipes.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.sewerpipes.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kanalizatsiya/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#4fb3ff">
-  <a class="head" href="https://wobqqq.github.io/aviadispetcher/en/"><img src="https://wobqqq.github.io/aviadispetcher/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Air Dispatcher: Landing</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>Land every plane and helicopter before fuel runs out: 300 levels at 12 airports, wind, storms and night shifts.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.airdispatcher.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.airdispatcher.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/aviadispetcher/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#38c6f4">
-  <a class="head" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/en/"><img src="https://wobqqq.github.io/zatyazhnoy-pryzhok/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Skydive Hero</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.skydivehero.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.skydivehero.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/en/privacy.html">Privacy</a></div>
-</li>
 <li class="card" data-p="android" style="--c:#b22222">
-  <a class="head" href="https://wobqqq.github.io/stalnoy-front/en/"><img src="https://wobqqq.github.io/stalnoy-front/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Steel Front</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/stalnoy-front/en/"><img src="https://wobqqq.github.io/stalnoy-front/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Steel Front</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.steelfront.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.steelfront.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/stalnoy-front/en/privacy.html">Privacy</a></div>
 </li>
-<li class="card" data-p="android" style="--c:#1f4d3a">
-  <a class="head" href="https://wobqqq.github.io/sortirovochnaya/en/"><img src="https://wobqqq.github.io/sortirovochnaya/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Sorting Yard</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>A Soviet railway puzzle: build the train by the waybill, 300 trains over six eras, from steam to the ER200.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sortingyard.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119630507">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/sortirovochnaya/en/privacy.html">Privacy</a></div>
-</li>
-<li class="card" data-p="android" style="--c:#4e7a34">
-  <a class="head" href="https://wobqqq.github.io/tihaya-ohota/en/"><img src="https://wobqqq.github.io/tihaya-ohota/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Mushroom Picker</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 150 species and a mushroom guide.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tihayaohota.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.tihayaohota.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/tihaya-ohota/en/privacy.html">Privacy</a></div>
+<li class="card" data-p="android" style="--c:#e2b45a">
+  <a class="head" href="https://wobqqq.github.io/klass-13/en/"><img src="https://wobqqq.github.io/klass-13/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Classroom 13</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.classroom13.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.classroom13.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/klass-13/en/privacy.html">Privacy</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#7a1f2b">
-  <a class="head" href="https://wobqqq.github.io/peremotka-90/en/"><img src="https://wobqqq.github.io/peremotka-90/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>90s Rewind</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/peremotka-90/en/"><img src="https://wobqqq.github.io/peremotka-90/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>90s Rewind</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>A cozy 90s ASMR puzzle: untangle the chewed tape, wind it back with a pencil and press Play. 300 cassettes and original 90s-style music.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.rewind90s.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.rewind90s.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/peremotka-90/en/privacy.html">Privacy</a></div>
 </li>
 <li class="card" data-p="android" style="--c:#5b4bb8">
-  <a class="head" href="https://wobqqq.github.io/kot-na-klave/en/"><img src="https://wobqqq.github.io/kot-na-klave/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Cat on Keyboard</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/kot-na-klave/en/"><img src="https://wobqqq.github.io/kot-na-klave/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Cat on Keyboard</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>A cosy puzzle: a fluffy cat fell asleep on your keyboard. Fold its paws and carry it to a cushion without waking it. 300 levels, 40 coats and dozens of keyboards.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.catonkeyboard.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.catonkeyboard.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kot-na-klave/en/privacy.html">Privacy</a></div>
 </li>
-<li class="card" data-p="android" style="--c:#e2b45a">
-  <a class="head" href="https://wobqqq.github.io/klass-13/en/"><img src="https://wobqqq.github.io/klass-13/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Classroom 13</h3><div class="badges"><span class="badge">Android</span></div></div></a>
-  <p>A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.</p>
-  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.classroom13.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.classroom13.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/klass-13/en/privacy.html">Privacy</a></div>
-</li>
 <li class="card" data-p="android" style="--c:#2fa37f">
-  <a class="head" href="https://wobqqq.github.io/lift-v-panelke/en/"><img src="https://wobqqq.github.io/lift-v-panelke/icon_512.png" alt="" width="96" height="96" loading="lazy"><div><h3>Panel House Lift</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <a class="head" href="https://wobqqq.github.io/lift-v-panelke/en/"><img src="https://wobqqq.github.io/lift-v-panelke/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Panel House Lift</h3><div class="badges"><span class="badge">Android</span></div></div></a>
   <p>A lift operator puzzle in a Soviet panel block: take the neighbours to their floors, watch the weight needle and never overload the old lift. 300 levels, up to 16 floors and four entrances, Granny Zina with her seedlings and plenty of breakdowns.</p>
   <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.panelhouselift.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.panelhouselift.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/lift-v-panelke/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#c0603a">
+  <a class="head" href="https://wobqqq.github.io/po-pogode/en/"><img src="https://wobqqq.github.io/po-pogode/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Weather Dress Up</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.weatherdressup.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.weatherdressup.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/po-pogode/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#c8743a">
+  <a class="head" href="https://wobqqq.github.io/banny-den/en/"><img src="https://wobqqq.github.io/banny-den/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Bathhouse Master</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar's bathhouse.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bathhousemaster.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.bathhousemaster.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/banny-den/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#ffd25a">
+  <a class="head" href="https://wobqqq.github.io/bag-of-bags/en/"><img src="https://wobqqq.github.io/bag-of-bags/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Bag of Bags</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Fit every bag into one bag: fold, turn and nest. 240 levels.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.bagofbags.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427897">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/bag-of-bags/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#f6b93b">
+  <a class="head" href="https://wobqqq.github.io/zakatki/en/"><img src="https://wobqqq.github.io/zakatki/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Pickle Sort</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Sort pickles, tomatoes and jam into jars and seal the lid. 1000 levels.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.picklesort.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428039">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/zakatki/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#ff8a3d">
+  <a class="head" href="https://wobqqq.github.io/kto-menya-zaper/en/"><img src="https://wobqqq.github.io/kto-menya-zaper/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Who Blocked Me?</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Get every car out of the yard without a scratch. 300 levels.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.whoblockedme.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427693">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kto-menya-zaper/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#5b9a3c">
+  <a class="head" href="https://wobqqq.github.io/dacha/en/"><img src="https://wobqqq.github.io/dacha/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>My Dacha</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Plant, harvest, sell: garden beds, a greenhouse, hens and a cat on the porch.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.mydacha.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427941">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/dacha/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#c0392b">
+  <a class="head" href="https://wobqqq.github.io/skanvordy/en/"><img src="https://wobqqq.github.io/skanvordy/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Cozy Scanwords and Word Search</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Arrow-word puzzles and word searches for every day, large letters.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.scanwordgames.words">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119427985">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#d3263a">
+  <a class="head" href="https://wobqqq.github.io/dveri-zakryvayutsya/en/"><img src="https://wobqqq.github.io/dveri-zakryvayutsya/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Mind the Doors!</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>The train is pulling in: get the passengers to the doors. 300 stations.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.mindthedoors.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428067">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/dveri-zakryvayutsya/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#14a38b">
+  <a class="head" href="https://wobqqq.github.io/fabrika-ulybok/en/"><img src="https://wobqqq.github.io/fabrika-ulybok/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Smile Factory</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Build the perfect smile from puzzle teeth: bump into dent, tooth into gap. 300 levels.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.smilefactory.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428149">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/fabrika-ulybok/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#3e8fd8">
+  <a class="head" href="https://wobqqq.github.io/kholodilnik-po-polochkam/en/"><img src="https://wobqqq.github.io/kholodilnik-po-polochkam/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Tidy Fridge</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Put the groceries away: one kind per shelf, no gaps, spoiled food in the bin. 300 levels.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tidyfridge.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119428199">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kholodilnik-po-polochkam/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#ff6f91">
+  <a class="head" href="https://wobqqq.github.io/florist/en/"><img src="https://wobqqq.github.io/florist/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Florist</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Turn the stems until every flower reaches the ribbon, and the bouquet blooms. 40 bouquets to collect.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.florist.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.florist.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/florist/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#d42a1f">
+  <a class="head" href="https://wobqqq.github.io/skanvordy-sssr/en/"><img src="https://wobqqq.github.io/skanvordy-sssr/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Scanwords from the USSR</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Scanwords and word searches about everyday Soviet life: films, cartoons, the grocery, space.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sovietscanwords.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119605979">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy-sssr/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#8e1f4f">
+  <a class="head" href="https://wobqqq.github.io/skanvordy-18/en/"><img src="https://wobqqq.github.io/skanvordy-18/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Scanwords for Adults</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Scanwords and word searches 18+ with cheeky clues: flirting, bars, casino. Hosted by Madame Rosa.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.adultscanwords.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.adultscanwords.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/skanvordy-18/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#ff6fae">
+  <a class="head" href="https://wobqqq.github.io/slova-otaku/en/"><img src="https://wobqqq.github.io/slova-otaku/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Otaku Words</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Anime word search: find words from your favourite shows and otaku culture with Yuki the fox girl.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.otakuwords.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.otakuwords.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/slova-otaku/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#f2c230">
+  <a class="head" href="https://wobqqq.github.io/kanalizatsiya/en/"><img src="https://wobqqq.github.io/kanalizatsiya/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Sewer Pipes</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Turn the pipes so the water runs into the sewer and the green chemicals into their own drain. A plumber rat and graffiti.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sewerpipes.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.sewerpipes.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/kanalizatsiya/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#4fb3ff">
+  <a class="head" href="https://wobqqq.github.io/aviadispetcher/en/"><img src="https://wobqqq.github.io/aviadispetcher/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Air Dispatcher: Landing</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>Land every plane and helicopter before fuel runs out: 300 levels at 12 airports, wind, storms and night shifts.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.airdispatcher.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.airdispatcher.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/aviadispetcher/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#38c6f4">
+  <a class="head" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/en/"><img src="https://wobqqq.github.io/zatyazhnoy-pryzhok/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Skydive Hero</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.skydivehero.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.skydivehero.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/zatyazhnoy-pryzhok/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#1f4d3a">
+  <a class="head" href="https://wobqqq.github.io/sortirovochnaya/en/"><img src="https://wobqqq.github.io/sortirovochnaya/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Sorting Yard</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>A Soviet railway puzzle: build the train by the waybill, 300 trains over six eras, from steam to the ER200.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.sortingyard.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/C119630507">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/sortirovochnaya/en/privacy.html">Privacy</a></div>
+</li>
+<li class="card" data-p="android" style="--c:#4e7a34">
+  <a class="head" href="https://wobqqq.github.io/tihaya-ohota/en/"><img src="https://wobqqq.github.io/tihaya-ohota/icon_512.png" alt="" width="72" height="72" loading="lazy"><div><h3>Mushroom Picker</h3><div class="badges"><span class="badge">Android</span></div></div></a>
+  <p>A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 150 species and a mushroom guide.</p>
+  <div class="actions"><span class="stores"><a class="btn" href="https://www.rustore.ru/catalog/app/com.tihayaohota.game">Get it on RuStore</a><a class="btn" href="https://appgallery.huawei.com/app/detail?id=com.tihayaohota.game">Get it on AppGallery</a></span><a class="legal" href="https://wobqqq.github.io/tihaya-ohota/en/privacy.html">Privacy</a></div>
 </li>
 </ul>
 <nav class="pager" aria-label="Pages" data-prev="Previous page" data-next="Next page" hidden></nav>

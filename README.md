@@ -34,3 +34,4 @@
 | 🧣 | [Weather Dress Up](https://wobqqq.github.io/po-pogode/en/) |
 | 🔧 | [Grandpa’s Garage](https://wobqqq.github.io/garazh-deda/en/) |
 | 🍳 | [Food Scanwords](https://wobqqq.github.io/skanvordy-kukhnya/en/) |
+| 🔩 | [Car Scanwords](https://wobqqq.github.io/skanvordy-avto/en/) |

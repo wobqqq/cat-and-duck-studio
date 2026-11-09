@@ -33,3 +33,4 @@
 | 🛗 | [Panel House Lift](https://wobqqq.github.io/lift-v-panelke/en/) |
 | 🧣 | [Weather Dress Up](https://wobqqq.github.io/po-pogode/en/) |
 | 🔧 | [Grandpa’s Garage](https://wobqqq.github.io/garazh-deda/en/) |
+| 🍳 | [Food Scanwords](https://wobqqq.github.io/skanvordy-kukhnya/en/) |

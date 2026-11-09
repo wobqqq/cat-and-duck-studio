@@ -63,6 +63,10 @@ GAMES = [
         'ru': ('Кулинарные сканворды', 'Уютные сканворды только про еду: блюда, продукты, специи и напитки на тёплой деревянной кухне шефа Тимофея. 300 сканвордов, 300 филвордов и книга рецептов.'),
         'en': ('Food Scanwords', 'Cosy scanwords only about food: dishes, groceries, spices and drinks in Chef Timofey\'s warm wooden kitchen. 300 scanwords, word searches and a recipe book.')},
      'https://www.rustore.ru/catalog/app/com.foodscanwords.game', '#d4553a'),
+    ('skanvordy-avto', 'game', {
+        'ru': ('Авто Сканворды', 'Сканворды и филворды для водителей: устройство авто, марки, ПДД и дорога. За каждый выпуск — деталь в виртуальный гараж на 50 машин. Ведёт механик дядя Миша.'),
+        'en': ('Car Scanwords', 'Scanwords and word searches for drivers: car parts, makes, road rules and the road. Every puzzle adds a part to a Virtual Garage of 50 cars.')},
+     'https://www.rustore.ru/catalog/app/com.carscanwords.game', '#ffc21a'),
     ('banny-den', 'game', {
         'ru': ('Банный день', 'Уютная игра про русскую баню: поддай парку на раскалённые камни, направь облако на гостя, отпарь веником, окуни в купель и напои чаем. 300 смен от баньки у речки до Царской бани.'),
         'en': ('Bathhouse Master', 'A cosy Russian bathhouse game: splash water on red-hot stones, steer the steam onto your guests, whisk them with a birch broom, dunk them in the icy pool and pour them tea. 300 shifts up to the Tsar\'s bathhouse.')},

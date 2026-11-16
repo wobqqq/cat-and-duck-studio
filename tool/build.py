@@ -31,6 +31,10 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('epokha-znamen', 'game', {
+        'ru': ('Эпоха знамён', 'Пошаговая стратегия о войне 1812 года: веди русскую армию от Немана до Парижа. Колонна, линия и каре, картечь и штыковой удар, 52 исторических боя.'),
+        'en': ('Epoch of Banners', 'A turn-based strategy of 1812: lead the Russian army from the Niemen to Paris. Column, line and square, canister and the bayonet, 52 historic battles.')},
+     'https://www.rustore.ru/catalog/app/com.epochofbanners.game', '#8c2a1c'),
     ('stalnoy-front', 'game', {
         'ru': ('Стальной фронт', 'Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.'),
         'en': ('Steel Front', 'A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.')},

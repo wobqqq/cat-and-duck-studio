@@ -158,6 +158,9 @@ APPGALLERY = {
     'dacha': 'https://appgallery.huawei.com/app/C119427941',
     'skanvordy-sssr': 'https://appgallery.huawei.com/app/C119605979',
     'sortirovochnaya': 'https://appgallery.huawei.com/app/C119630507',
+    'florist': 'https://appgallery.huawei.com/app/C119605691',
+    'slova-otaku': 'https://appgallery.huawei.com/app/C119605815',
+    'kanalizatsiya': 'https://appgallery.huawei.com/app/C119605581',
 }
 
 T = {

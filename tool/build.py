@@ -39,6 +39,10 @@ GAMES = [
         'ru': ('Стальной фронт', 'Пошаговая стратегия Второй мировой: веди СССР от Москвы к победе, тактические бои на гексах, туман войны и ветераны.'),
         'en': ('Steel Front', 'A turn-based WWII strategy game: lead the USSR from Moscow to victory with tactical hex battles, fog of war and veterans.')},
      'https://www.rustore.ru/catalog/app/com.steelfront.game', '#b22222'),
+    ('okopnyy-front', 'game', {
+        'ru': ('Окопный фронт', 'Пошаговая стратегия Первой мировой: прорви окопы за Россию, Францию или Британию. Огневой вал, проволока, газ, первые танки и конница на гексах.'),
+        'en': ('Trench Front', 'A turn-based WW1 strategy game: break the trench lines for Russia, France or Britain with creeping barrages, wire, gas, the first tanks and cavalry on hexes.')},
+     'https://www.rustore.ru/catalog/app/com.trenchfront.game', '#c98a2e'),
     ('klass-13', 'game', {
         'ru': ('Класс №13', 'Стелс-хоррор в советской школе ночью: прячься в шкафах и под партами, дыши тише, чини щитки и найди класс, которого нет на плане. 7 глав, 42 локации, ночные дежурства без конца.'),
         'en': ('Classroom 13', 'A stealth horror in an old Soviet school at night: hide in lockers and under desks, hold your breath, fix fuse boxes and find the classroom that is on no plan. 7 chapters, 42 locations, endless night shifts.')},

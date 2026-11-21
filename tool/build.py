@@ -31,6 +31,10 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('kosmo-shchupaltsa', 'game', {
+        'ru': ('Космо Щупальца', 'Космическая физическая аркада: стреляй цветными щупальцами, раскачивайся между астероидами, круши станции Роя и вырывай генераторы реакторов. 10 секторов с боссами и бесконечный полёт.'),
+        'en': ('Cosmo Tentacles', 'A space physics arcade: shoot coloured tentacles, swing between asteroids, smash Swarm stations and rip out reactor generators. 10 sectors with bosses and an endless flight.')},
+     'https://www.rustore.ru/catalog/app/com.cosmotentacles.game', '#2a8fd6'),
     ('epokha-znamen', 'game', {
         'ru': ('Эпоха знамён', 'Пошаговая стратегия о войне 1812 года: веди русскую армию от Немана до Парижа. Колонна, линия и каре, картечь и штыковой удар, 52 исторических боя.'),
         'en': ('Epoch of Banners', 'A turn-based strategy of 1812: lead the Russian army from the Niemen to Paris. Column, line and square, canister and the bayonet, 52 historic battles.')},

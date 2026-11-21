@@ -192,6 +192,7 @@ T = {
         'vk_text': 'Трейлеры и геймплей наших игр: посмотрите, как играется, прежде чем скачать.',
         'vk_btn': 'Смотреть канал', 'vk_pill': 'VK Видео', 'rs_dev': 'Все игры в RuStore', 'ag_dev': 'Все игры в AppGallery',
         'yt_kicker': 'Наш канал', 'yt_title': 'Мы на YouTube', 'yt_text': 'Трейлеры, геймплей и новости о новых играх студии. Подписывайтесь!', 'yt_btn': 'Открыть YouTube', 'yt_pill': 'YouTube',
+        'tt_kicker': 'Наш канал', 'tt_title': 'Мы в TikTok', 'tt_text': 'Короткие ролики из наших игр: залипательные уровни и новинки студии.', 'tt_btn': 'Открыть TikTok', 'tt_pill': 'TikTok',
     },
     'en': {
         'title': 'Cat & Duck Studio — cozy games and apps',
@@ -215,6 +216,7 @@ T = {
         'vk_text': 'Trailers and gameplay of our games: see how they play before you download.',
         'vk_btn': 'Watch the channel', 'vk_pill': 'VK Video', 'rs_dev': 'All games on RuStore', 'ag_dev': 'All games on AppGallery',
         'yt_kicker': 'Our channel', 'yt_title': 'We are on YouTube', 'yt_text': 'Trailers, gameplay and news about our new games. Subscribe!', 'yt_btn': 'Open YouTube', 'yt_pill': 'YouTube',
+        'tt_kicker': 'Our channel', 'tt_title': 'We are on TikTok', 'tt_text': 'Short clips from our games: satisfying levels and new studio releases.', 'tt_btn': 'Open TikTok', 'tt_pill': 'TikTok',
     },
 }
 
@@ -321,6 +323,11 @@ a.pill:hover { color: var(--vk); }
               radial-gradient(circle at 0% 100%, rgba(255, 120, 200, .35), transparent 45%),
               linear-gradient(120deg, #e0002a, #ff0033 45%, #ff5a36); }
 .vk.yt .btn { color: #c4001f; }
+.vk.tt { margin-top: 18px; box-shadow: 0 14px 34px rgba(0, 0, 0, .3);
+  background: radial-gradient(circle at 92% 10%, rgba(37, 244, 238, .45), transparent 40%),
+              radial-gradient(circle at 0% 100%, rgba(254, 44, 85, .45), transparent 45%),
+              linear-gradient(120deg, #111, #1f1f24 50%, #2a1530); }
+.vk.tt .btn { color: #111; }
 [hidden] { display: none !important; }
 .crumbs { font-size: 14px; color: var(--soft); margin: 0 0 10px; }
 .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
@@ -428,6 +435,7 @@ PAGER = '''
 
 VK_VIDEO = 'https://vkvideo.ru/@club242343168'
 YOUTUBE = 'https://www.youtube.com/@CatAndDuckGames'
+TIKTOK = 'https://www.tiktok.com/@catduckstudio'
 APPGALLERY_DEV = 'https://appgallery.huawei.com/tab/appdetailCommon%7CC119427897%7Cautomore%7Cdoublecolumncardwithstar%7C903547'
 RUSTORE_DEV = 'https://www.rustore.ru/catalog/developer/56wj6b'
 PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>'
@@ -477,7 +485,7 @@ def page(lang):
 <meta property="og:image" content="https://wobqqq.github.io/cat-and-duck-studio/icon-512.png">
 {alt}
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"wobqqq","item":"https://wobqqq.github.io/"}},{{"@type":"ListItem","position":2,"name":"Cat & Duck Studio","item":"{home_url}{'ru/' if lang == 'ru' else ''}"}}]}}</script>
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"Cat & Duck Studio","url":"{home_url}","logo":"{home_url}icon-512.png","sameAs":["{VK_VIDEO}","{YOUTUBE}","{RUSTORE_DEV}","{APPGALLERY_DEV}"]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"Cat & Duck Studio","url":"{home_url}","logo":"{home_url}icon-512.png","sameAs":["{VK_VIDEO}","{YOUTUBE}","{TIKTOK}","{RUSTORE_DEV}","{APPGALLERY_DEV}"]}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -492,7 +500,7 @@ def page(lang):
     <h1>Cat &amp; Duck Studio</h1>
     <p class="tag">{t['tag']}</p>
     <p class="lead">{t['lead']}</p>
-    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span><a class="pill" href="{VK_VIDEO}" style="--vk:#0077ff">▶️ {t['vk_pill']}</a><a class="pill" href="{YOUTUBE}" style="--vk:#ff0033">📺 {t['yt_pill']}</a><a class="pill" href="{RUSTORE_DEV}" style="--vk:#0077ff">🛒 {t['rs_dev']}</a><a class="pill" href="{APPGALLERY_DEV}" style="--vk:#cf0a2c">🛍️ {t['ag_dev']}</a></div>
+    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span><a class="pill" href="{VK_VIDEO}" style="--vk:#0077ff">▶️ {t['vk_pill']}</a><a class="pill" href="{YOUTUBE}" style="--vk:#ff0033">📺 {t['yt_pill']}</a><a class="pill" href="{TIKTOK}" style="--vk:#fe2c55">🎵 {t['tt_pill']}</a><a class="pill" href="{RUSTORE_DEV}" style="--vk:#0077ff">🛒 {t['rs_dev']}</a><a class="pill" href="{APPGALLERY_DEV}" style="--vk:#cf0a2c">🛍️ {t['ag_dev']}</a></div>
   </div>
   {LOGO}
 </section>
@@ -511,6 +519,11 @@ def page(lang):
   <div class="play">{PLAY}</div>
   <div><small>{t['yt_kicker']}</small><h2 id="yt-title">{t['yt_title']}</h2><p>{t['yt_text']}</p></div>
   <a class="btn" href="{YOUTUBE}" target="_blank" rel="noopener">{t['yt_btn']} →</a>
+</section>
+<section class="vk tt" aria-labelledby="tt-title">
+  <div class="play">{PLAY}</div>
+  <div><small>{t['tt_kicker']}</small><h2 id="tt-title">{t['tt_title']}</h2><p>{t['tt_text']}</p></div>
+  <a class="btn" href="{TIKTOK}" target="_blank" rel="noopener">{t['tt_btn']} →</a>
 </section>
 <section class="features">
   <div class="feature"><i>📴</i><b>{t['f1'][0]}</b><span>{t['f1'][1]}</span></div>

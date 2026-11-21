@@ -187,6 +187,9 @@ T = {
         'game': 'Игра', 'count': 'игр',
         'empty': 'Здесь пока пусто — но скоро будет.',
         'pages': 'Страницы', 'prev': 'Предыдущая страница', 'next': 'Следующая страница',
+        'vk_kicker': 'Наш канал', 'vk_title': 'Смотрите нас на VK Видео',
+        'vk_text': 'Трейлеры и геймплей наших игр: посмотрите, как играется, прежде чем скачать.',
+        'vk_btn': 'Смотреть канал', 'vk_pill': 'VK Видео',
     },
     'en': {
         'title': 'Cat & Duck Studio — cozy games and apps',
@@ -206,6 +209,9 @@ T = {
         'game': 'Game', 'count': 'games',
         'empty': 'Nothing here yet — but soon.',
         'pages': 'Pages', 'prev': 'Previous page', 'next': 'Next page',
+        'vk_kicker': 'Our channel', 'vk_title': 'Watch us on VK Video',
+        'vk_text': 'Trailers and gameplay of our games: see how they play before you download.',
+        'vk_btn': 'Watch the channel', 'vk_pill': 'VK Video',
     },
 }
 
@@ -286,6 +292,27 @@ header.top { display: flex; align-items: center; justify-content: space-between;
 .feature span { color: var(--soft); font-size: 15px; }
 .feature i { font-style: normal; font-size: 26px; display: block; margin-bottom: 6px; }
 footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--edge); margin-top: 28px; }
+a.pill { color: var(--ink); text-decoration: none; }
+a.pill:hover { color: var(--vk); }
+.vk { --vk: #0077ff; position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center;
+  margin: 44px 0 0; padding: 28px; border-radius: 28px; color: #fff;
+  background: radial-gradient(circle at 92% 10%, rgba(255, 210, 90, .45), transparent 40%),
+              radial-gradient(circle at 0% 100%, rgba(255, 120, 200, .35), transparent 45%),
+              linear-gradient(120deg, #0a5cff, #0077ff 45%, #5b3cff); box-shadow: 0 14px 34px rgba(0, 80, 220, .25); }
+.vk::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .14;
+  background: repeating-linear-gradient(90deg, #fff 0 10px, transparent 10px 22px) top / 100% 8px no-repeat,
+              repeating-linear-gradient(90deg, #fff 0 10px, transparent 10px 22px) bottom / 100% 8px no-repeat; }
+.vk .play { width: 92px; height: 92px; border-radius: 26px; background: rgba(255, 255, 255, .16); display: grid; place-items: center;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .35); animation: pulse 2.8s ease-in-out infinite; }
+.vk .play svg { width: 46px; height: 46px; margin-left: 6px; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, .2)); }
+@keyframes pulse { 50% { transform: scale(1.06); box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .55), 0 0 0 10px rgba(255, 255, 255, .08); } }
+@media (prefers-reduced-motion: reduce) { .vk .play { animation: none; } }
+.vk small { display: block; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; opacity: .85; }
+.vk h2 { margin: 2px 0 6px; font-size: clamp(24px, 3.4vw, 32px); line-height: 1.1; font-weight: 900; }
+.vk p { margin: 0; opacity: .92; max-width: 560px; }
+.vk .btn { background: #fff; color: #0a4fd6; padding: 13px 22px; border-radius: 16px; font-size: 16px; white-space: nowrap; position: relative; z-index: 1;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .18); transition: transform .15s ease; }
+.vk .btn:hover { transform: translateY(-2px); filter: none; }
 [hidden] { display: none !important; }
 .crumbs { font-size: 14px; color: var(--soft); margin: 0 0 10px; }
 .crumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
@@ -298,6 +325,10 @@ footer { padding: 28px 0 48px; color: var(--soft); font-size: 15px; display: fle
   .hero .logo { order: -1; width: 120px; }
   .features { grid-template-columns: 1fr; }
   .bar h2 { font-size: 24px; }
+  .vk { grid-template-columns: 1fr; padding: 24px 20px; gap: 16px; }
+  .vk .play { width: 72px; height: 72px; border-radius: 22px; }
+  .vk .play svg { width: 36px; height: 36px; }
+  .vk .btn { justify-content: center; }
 }
 @media (max-width: 1000px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 760px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
@@ -387,6 +418,10 @@ PAGER = '''
 ''' % PAGE_SIZE
 
 
+VK_VIDEO = 'https://vkvideo.ru/@club242343168'
+PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>'
+
+
 def page(lang):
     t = T[lang]
     # English is the main page (/), Russian lives in /ru/; game pages are
@@ -431,6 +466,7 @@ def page(lang):
 <meta property="og:image" content="https://wobqqq.github.io/cat-and-duck-studio/icon-512.png">
 {alt}
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"wobqqq","item":"https://wobqqq.github.io/"}},{{"@type":"ListItem","position":2,"name":"Cat & Duck Studio","item":"{home_url}{'ru/' if lang == 'ru' else ''}"}}]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"Cat & Duck Studio","url":"{home_url}","logo":"{home_url}icon-512.png","sameAs":["{VK_VIDEO}"]}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -445,7 +481,7 @@ def page(lang):
     <h1>Cat &amp; Duck Studio</h1>
     <p class="tag">{t['tag']}</p>
     <p class="lead">{t['lead']}</p>
-    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span></div>
+    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span><a class="pill" href="{VK_VIDEO}" style="--vk:#0077ff">▶️ {t['vk_pill']}</a></div>
   </div>
   {LOGO}
 </section>
@@ -455,13 +491,18 @@ def page(lang):
 {chr(10).join(cards)}
 </ul>
 <nav class="pager" aria-label="{t['pages']}" data-prev="{t['prev']}" data-next="{t['next']}" hidden></nav>
+<section class="vk" aria-labelledby="vk-title">
+  <div class="play">{PLAY}</div>
+  <div><small>{t['vk_kicker']}</small><h2 id="vk-title">{t['vk_title']}</h2><p>{t['vk_text']}</p></div>
+  <a class="btn" href="{VK_VIDEO}" target="_blank" rel="noopener">{t['vk_btn']} →</a>
+</section>
 <section class="features">
   <div class="feature"><i>📴</i><b>{t['f1'][0]}</b><span>{t['f1'][1]}</span></div>
   <div class="feature"><i>🙅</i><b>{t['f2'][0]}</b><span>{t['f2'][1]}</span></div>
   <div class="feature"><i>🛡️</i><b>{t['f3'][0]}</b><span>{t['f3'][1]}</span></div>
 </section>
 </main>
-<footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span>{t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
+<footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span><a href="{VK_VIDEO}">{t['vk_pill']}</a> · {t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
 </div>
 <script>{PAGER}</script>
 <script>document.querySelectorAll(".year").forEach(function (e) {{ e.textContent = new Date().getFullYear(); }});</script>

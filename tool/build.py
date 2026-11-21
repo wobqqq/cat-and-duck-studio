@@ -190,7 +190,7 @@ T = {
         'pages': 'Страницы', 'prev': 'Предыдущая страница', 'next': 'Следующая страница',
         'vk_kicker': 'Наш канал', 'vk_title': 'Смотрите нас на VK Видео',
         'vk_text': 'Трейлеры и геймплей наших игр: посмотрите, как играется, прежде чем скачать.',
-        'vk_btn': 'Смотреть канал', 'vk_pill': 'VK Видео', 'rs_dev': 'Все игры в RuStore',
+        'vk_btn': 'Смотреть канал', 'vk_pill': 'VK Видео', 'rs_dev': 'Все игры в RuStore', 'ag_dev': 'Все игры в AppGallery',
         'yt_kicker': 'Наш канал', 'yt_title': 'Мы на YouTube', 'yt_text': 'Трейлеры, геймплей и новости о новых играх студии. Подписывайтесь!', 'yt_btn': 'Открыть YouTube', 'yt_pill': 'YouTube',
     },
     'en': {
@@ -213,7 +213,7 @@ T = {
         'pages': 'Pages', 'prev': 'Previous page', 'next': 'Next page',
         'vk_kicker': 'Our channel', 'vk_title': 'Watch us on VK Video',
         'vk_text': 'Trailers and gameplay of our games: see how they play before you download.',
-        'vk_btn': 'Watch the channel', 'vk_pill': 'VK Video', 'rs_dev': 'All games on RuStore',
+        'vk_btn': 'Watch the channel', 'vk_pill': 'VK Video', 'rs_dev': 'All games on RuStore', 'ag_dev': 'All games on AppGallery',
         'yt_kicker': 'Our channel', 'yt_title': 'We are on YouTube', 'yt_text': 'Trailers, gameplay and news about our new games. Subscribe!', 'yt_btn': 'Open YouTube', 'yt_pill': 'YouTube',
     },
 }
@@ -428,6 +428,7 @@ PAGER = '''
 
 VK_VIDEO = 'https://vkvideo.ru/@club242343168'
 YOUTUBE = 'https://www.youtube.com/@CatAndDuckGames'
+APPGALLERY_DEV = 'https://appgallery.huawei.com/tab/appdetailCommon%7CC119427897%7Cautomore%7Cdoublecolumncardwithstar%7C903547'
 RUSTORE_DEV = 'https://www.rustore.ru/catalog/developer/56wj6b'
 PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></svg>'
 
@@ -476,7 +477,7 @@ def page(lang):
 <meta property="og:image" content="https://wobqqq.github.io/cat-and-duck-studio/icon-512.png">
 {alt}
 <script type="application/ld+json">{{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"wobqqq","item":"https://wobqqq.github.io/"}},{{"@type":"ListItem","position":2,"name":"Cat & Duck Studio","item":"{home_url}{'ru/' if lang == 'ru' else ''}"}}]}}</script>
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"Cat & Duck Studio","url":"{home_url}","logo":"{home_url}icon-512.png","sameAs":["{VK_VIDEO}","{YOUTUBE}","{RUSTORE_DEV}"]}}</script>
+<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"Cat & Duck Studio","url":"{home_url}","logo":"{home_url}icon-512.png","sameAs":["{VK_VIDEO}","{YOUTUBE}","{RUSTORE_DEV}","{APPGALLERY_DEV}"]}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -491,7 +492,7 @@ def page(lang):
     <h1>Cat &amp; Duck Studio</h1>
     <p class="tag">{t['tag']}</p>
     <p class="lead">{t['lead']}</p>
-    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span><a class="pill" href="{VK_VIDEO}" style="--vk:#0077ff">▶️ {t['vk_pill']}</a><a class="pill" href="{YOUTUBE}" style="--vk:#ff0033">📺 {t['yt_pill']}</a><a class="pill" href="{RUSTORE_DEV}" style="--vk:#0077ff">🛒 {t['rs_dev']}</a></div>
+    <div class="platforms"><span class="pill">🤖 Android</span><span class="pill">🎮 {len(GAMES)} {t['count']}</span><a class="pill" href="{VK_VIDEO}" style="--vk:#0077ff">▶️ {t['vk_pill']}</a><a class="pill" href="{YOUTUBE}" style="--vk:#ff0033">📺 {t['yt_pill']}</a><a class="pill" href="{RUSTORE_DEV}" style="--vk:#0077ff">🛒 {t['rs_dev']}</a><a class="pill" href="{APPGALLERY_DEV}" style="--vk:#cf0a2c">🛍️ {t['ag_dev']}</a></div>
   </div>
   {LOGO}
 </section>
@@ -517,7 +518,7 @@ def page(lang):
   <div class="feature"><i>🛡️</i><b>{t['f3'][0]}</b><span>{t['f3'][1]}</span></div>
 </section>
 </main>
-<footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span><a href="{VK_VIDEO}">{t['vk_pill']}</a> · <a href="{YOUTUBE}">YouTube</a> · <a href="{RUSTORE_DEV}">RuStore</a> · {t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
+<footer><span>© <span class="year">2026</span> Cat &amp; Duck Studio</span><span><a href="{VK_VIDEO}">{t['vk_pill']}</a> · <a href="{YOUTUBE}">YouTube</a> · <a href="{RUSTORE_DEV}">RuStore</a> · <a href="{APPGALLERY_DEV}">AppGallery</a> · {t['contact']}: <a href="mailto:serzakharevich@yandex.by">serzakharevich@yandex.by</a></span></footer>
 </div>
 <script>{PAGER}</script>
 <script>document.querySelectorAll(".year").forEach(function (e) {{ e.textContent = new Date().getFullYear(); }});</script>

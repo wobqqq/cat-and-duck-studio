@@ -36,3 +36,4 @@
 | 🔧 | [Grandpa’s Garage](https://wobqqq.github.io/garazh-deda/en/) |
 | 🍳 | [Food Scanwords](https://wobqqq.github.io/skanvordy-kukhnya/en/) |
 | 🔩 | [Car Scanwords](https://wobqqq.github.io/skanvordy-avto/en/) |
+| 🐙 | [Cosmo Tentacles](https://wobqqq.github.io/kosmo-shchupaltsa/en/) |

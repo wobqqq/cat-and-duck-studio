@@ -67,6 +67,18 @@ GAMES = [
         'ru': ('По погоде', 'Головоломка-одевалка: выгляни в окно и одень героя по погоде, чтобы было тепло, сухо и не жарко. 200 уровней, 20 городов от −40 до +38, 76 вещей в 15 слоях и 9 соседей.'),
         'en': ('Weather Dress Up', 'A dress-up puzzle: look out of the window and dress the hero for the weather so they stay warm, dry and not too hot. 200 levels, 20 cities from −40 to +38, 76 items in 15 layers and 9 neighbours.')},
      'https://www.rustore.ru/catalog/app/com.weatherdressup.game', '#c0603a'),
+    ('zatyazhnoy-pryzhok', 'game', {
+        'ru': ('Затяжной прыжок', 'Реалистичный затяжной прыжок: кольца, девять трюков и групповые прыжки, 300 прыжков над 10 зонами — от летнего луга до стратосферы.'),
+        'en': ('Skydive Hero', 'A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.')},
+     'https://www.rustore.ru/catalog/app/com.skydivehero.game', '#38c6f4'),
+    ('tihaya-ohota', 'game', {
+        'ru': ('Тихая Охота', 'Уютная грибная головоломка: собирай настоящие грибы лесов России и Беларуси в корзину и не перепутай с ядовитыми двойниками. 300 полян, 150 видов и справочник грибника.'),
+        'en': ('Mushroom Picker', 'A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 150 species and a mushroom guide.')},
+     'https://www.rustore.ru/catalog/app/com.tihayaohota.game', '#4e7a34'),
+    ('dveri-zakryvayutsya', 'game', {
+        'ru': ('Осторожно, двери закрываются!', 'Поезд подъезжает к станции: проведи выходящих пассажиров к дверям. 300 станций.'),
+        'en': ('Mind the Doors!', 'The train is pulling in: get the passengers to the doors. 300 stations.')},
+     'https://www.rustore.ru/catalog/app/com.mindthedoors.game', '#d3263a'),
     ('garazh-deda', 'game', {
         'ru': ('Гараж деда', 'Уютная головоломка: разложи дедовский хлам по полкам так, чтобы всё влезло — банки в ряд, ключи от большого к малому, тяжёлое вниз. 300 уровней в шести местах и 150 вещей.'),
         'en': ('Grandpa’s Garage', 'A cosy puzzle: sort grandpa\'s junk onto his shelves so everything fits: jars in a row, wrenches big to small, heavy things low. 300 levels in six places and 150 things.')},
@@ -103,10 +115,6 @@ GAMES = [
         'ru': ('Уютные Сканворды и Филворды', 'Сканворды со стрелками и филворды на каждый день, крупные буквы.'),
         'en': ('Cozy Scanwords and Word Search', 'Arrow-word puzzles and word searches for every day, large letters.')},
      'https://www.rustore.ru/catalog/app/com.scanwordgames.words', '#c0392b'),
-    ('dveri-zakryvayutsya', 'game', {
-        'ru': ('Осторожно, двери закрываются!', 'Поезд подъезжает к станции: проведи выходящих пассажиров к дверям. 300 станций.'),
-        'en': ('Mind the Doors!', 'The train is pulling in: get the passengers to the doors. 300 stations.')},
-     'https://www.rustore.ru/catalog/app/com.mindthedoors.game', '#d3263a'),
     ('fabrika-ulybok', 'game', {
         'ru': ('Фабрика улыбок', 'Собери идеальную улыбку из зубов-пазлов: выступ в выемку, зуб в лунку. 300 уровней.'),
         'en': ('Smile Factory', 'Build the perfect smile from puzzle teeth: bump into dent, tooth into gap. 300 levels.')},
@@ -139,18 +147,10 @@ GAMES = [
         'ru': ('Авиадиспетчер: Посадка', 'Посади самолёты и вертолёты, пока не кончилось топливо: 300 уровней в 12 аэропортах, ветер, грозы и ночные смены.'),
         'en': ('Air Dispatcher: Landing', 'Land every plane and helicopter before fuel runs out: 300 levels at 12 airports, wind, storms and night shifts.')},
      'https://www.rustore.ru/catalog/app/com.airdispatcher.game', '#4fb3ff'),
-    ('zatyazhnoy-pryzhok', 'game', {
-        'ru': ('Затяжной прыжок', 'Реалистичный затяжной прыжок: кольца, девять трюков и групповые прыжки, 300 прыжков над 10 зонами — от летнего луга до стратосферы.'),
-        'en': ('Skydive Hero', 'A realistic freefall: rings, nine tricks and jumps with friends, 300 jumps over 10 drop zones, from a summer meadow to the stratosphere.')},
-     'https://www.rustore.ru/catalog/app/com.skydivehero.game', '#38c6f4'),
     ('sortirovochnaya', 'game', {
         'ru': ('Сортировочная', 'Головоломка про советскую железную дорогу: собери поезд по натурному листу, 300 составов в шести эпохах, от паровозов до ЭР200.'),
         'en': ('Sorting Yard', 'A Soviet railway puzzle: build the train by the waybill, 300 trains over six eras, from steam to the ER200.')},
      'https://www.rustore.ru/catalog/app/com.sortingyard.game', '#1f4d3a'),
-    ('tihaya-ohota', 'game', {
-        'ru': ('Тихая Охота', 'Уютная грибная головоломка: собирай настоящие грибы лесов России и Беларуси в корзину и не перепутай с ядовитыми двойниками. 300 полян, 150 видов и справочник грибника.'),
-        'en': ('Mushroom Picker', 'A cosy mushroom puzzle: pick real mushrooms of Russian and Belarusian forests into the basket and leave the poisonous look-alikes alone. 300 glades, 150 species and a mushroom guide.')},
-     'https://www.rustore.ru/catalog/app/com.tihayaohota.game', '#4e7a34'),
 ]
 
 # The real AppGallery pages of the games published there (each game's APPGALLERY_URL in tool/game.env);

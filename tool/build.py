@@ -176,6 +176,8 @@ APPGALLERY = {
     'kanalizatsiya': 'https://appgallery.huawei.com/app/C119605581',
     'stalnoy-front': 'https://appgallery.huawei.com/app/C119720981',
     'epokha-znamen': 'https://appgallery.huawei.com/app/C119871607',
+    'garazh-deda': 'https://appgallery.huawei.com/app/C119835181',
+    'banny-den': 'https://appgallery.huawei.com/app/C119831133',
 }
 
 T = {

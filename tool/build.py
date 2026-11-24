@@ -179,6 +179,7 @@ APPGALLERY = {
     'garazh-deda': 'https://appgallery.huawei.com/app/C119835181',
     'banny-den': 'https://appgallery.huawei.com/app/C119831133',
     'po-pogode': 'https://appgallery.huawei.com/app/C119830089',
+    'peremotka-90': 'https://appgallery.huawei.com/app/C119829613',
 }
 
 T = {

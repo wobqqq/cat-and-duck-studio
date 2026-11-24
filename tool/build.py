@@ -183,6 +183,7 @@ APPGALLERY = {
     'lift-v-panelke': 'https://appgallery.huawei.com/app/C119830785',
     'kot-na-klave': 'https://appgallery.huawei.com/app/C119830293',
     'skanvordy-avto': 'https://appgallery.huawei.com/app/C119835957',
+    'skanvordy-kukhnya': 'https://appgallery.huawei.com/app/C119835571',
 }
 
 T = {

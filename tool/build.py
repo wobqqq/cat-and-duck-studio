@@ -180,6 +180,7 @@ APPGALLERY = {
     'banny-den': 'https://appgallery.huawei.com/app/C119831133',
     'po-pogode': 'https://appgallery.huawei.com/app/C119830089',
     'peremotka-90': 'https://appgallery.huawei.com/app/C119829613',
+    'lift-v-panelke': 'https://appgallery.huawei.com/app/C119830785',
 }
 
 T = {

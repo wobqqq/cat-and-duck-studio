@@ -175,6 +175,7 @@ APPGALLERY = {
     'slova-otaku': 'https://appgallery.huawei.com/app/C119605815',
     'kanalizatsiya': 'https://appgallery.huawei.com/app/C119605581',
     'stalnoy-front': 'https://appgallery.huawei.com/app/C119720981',
+    'epokha-znamen': 'https://appgallery.huawei.com/app/C119871607',
 }
 
 T = {

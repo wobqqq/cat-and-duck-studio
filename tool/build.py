@@ -31,6 +31,10 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('kotopulta', 'game', {
+        'ru': ('Котопульта', 'Запускай пушистых котиков из катапульты в злых начальников, пока злость не растает в сердечках. Честная физика, 10 пород со своими умениями, 200 уровней в 16 местах и боссы.'),
+        'en': ('Catapult Cats', 'Launch fluffy cats from a catapult at grumpy bosses until their anger melts into hearts. Honest physics, 10 breeds with their own skills, 200 levels in 16 places and bosses.')},
+     'https://www.rustore.ru/catalog/app/com.catapultcats.game', '#e08a3c'),
     ('kosmo-shchupaltsa', 'game', {
         'ru': ('Космо Щупальца', 'Космическая физическая аркада: стреляй цветными щупальцами, раскачивайся между астероидами, круши станции Роя и вырывай генераторы реакторов. 10 секторов с боссами и бесконечный полёт.'),
         'en': ('Cosmo Tentacles', 'A space physics arcade: shoot coloured tentacles, swing between asteroids, smash Swarm stations and rip out reactor generators. 10 sectors with bosses and an endless flight.')},

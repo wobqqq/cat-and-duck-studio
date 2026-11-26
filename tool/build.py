@@ -184,6 +184,9 @@ APPGALLERY = {
     'kot-na-klave': 'https://appgallery.huawei.com/app/C119830293',
     'skanvordy-avto': 'https://appgallery.huawei.com/app/C119835957',
     'skanvordy-kukhnya': 'https://appgallery.huawei.com/app/C119835571',
+    'zatyazhnoy-pryzhok': 'https://appgallery.huawei.com/app/C119605755',
+    'tihaya-ohota': 'https://appgallery.huawei.com/app/C119721615',
+    'kosmo-shchupaltsa': 'https://appgallery.huawei.com/app/C119935443',
 }
 
 T = {

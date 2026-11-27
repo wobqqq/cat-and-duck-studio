@@ -38,3 +38,4 @@
 | 🔩 | [Car Scanwords](https://wobqqq.github.io/skanvordy-avto/en/) |
 | 🐙 | [Cosmo Tentacles](https://wobqqq.github.io/kosmo-shchupaltsa/en/) |
 | 🐱 | [Catapult Cats](https://wobqqq.github.io/kotopulta/en/) |
+| 🕯️ | [Cult: Global Domination](https://wobqqq.github.io/kult/en/) |

@@ -187,6 +187,9 @@ APPGALLERY = {
     'zatyazhnoy-pryzhok': 'https://appgallery.huawei.com/app/C119605755',
     'tihaya-ohota': 'https://appgallery.huawei.com/app/C119721615',
     'kosmo-shchupaltsa': 'https://appgallery.huawei.com/app/C119935443',
+    'klass-13': 'https://appgallery.huawei.com/app/C119828585',
+    'okopnyy-front': 'https://appgallery.huawei.com/app/C119927777',
+    'skanvordy-18': 'https://appgallery.huawei.com/app/C119606009',
 }
 
 T = {

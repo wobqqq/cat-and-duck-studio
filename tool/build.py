@@ -31,6 +31,10 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('kult', 'game', {
+        'ru': ('Культ: Мировое господство', 'Стратегия-симулятор и кликер: нелепый тайный орден расползается по ночной Земле. Вербуй адептов, покупай догматы, отправляй агентов и держи Тревогу Бюро ниже 100 %. 300 сценариев.'),
+        'en': ('Cult: Global Domination', 'A strategy simulator and clicker: a silly hidden order spreads over the night Earth. Recruit adepts, buy dogmas, send agents and keep the Bureau\'s Alarm under 100 %. 300 scenarios.')},
+     'https://www.rustore.ru/catalog/app/com.cultdomination.game', '#8b5cff'),
     ('kotopulta', 'game', {
         'ru': ('Котопульта', 'Запускай пушистых котиков из катапульты в злых начальников, пока злость не растает в сердечках. Честная физика, 10 пород со своими умениями, 200 уровней в 16 местах и боссы.'),
         'en': ('Catapult Cats', 'Launch fluffy cats from a catapult at grumpy bosses until their anger melts into hearts. Honest physics, 10 breeds with their own skills, 200 levels in 16 places and bosses.')},

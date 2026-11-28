@@ -39,3 +39,4 @@
 | 🐙 | [Cosmo Tentacles](https://wobqqq.github.io/kosmo-shchupaltsa/en/) |
 | 🐱 | [Catapult Cats](https://wobqqq.github.io/kotopulta/en/) |
 | 🕯️ | [Cult: Global Domination](https://wobqqq.github.io/kult/en/) |
+| 🛵 | [Courier Rush: Delivery Runner](https://wobqqq.github.io/kurer-rush/en/) |

@@ -31,6 +31,10 @@ LOGO = '''<svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Cat &am
 </svg>'''
 
 GAMES = [
+    ('kurer-rush', 'game', {
+        'ru': ('Курьер Раш: Доставка на районе', 'Раннер по пиксельному району 90-х: беги с курьером Дашей, перепрыгивай машины из арок и доставляй заказы горячими. Бесконечный бег, 300 маршрутов в 10 районах, самокат, мопед и ракетный велосипед.'),
+        'en': ('Courier Rush: Delivery Runner', 'A runner through a pixel 90s neighbourhood: run with Dasha the courier, jump the cars out of the arches and deliver orders hot. An endless run, 300 routes in 10 districts, a scooter, a moped and a rocket bike.')},
+     'https://www.rustore.ru/catalog/app/com.courierrush.game', '#f2672e'),
     ('kult', 'game', {
         'ru': ('Культ: Мировое господство', 'Стратегия-симулятор и кликер: нелепый тайный орден расползается по ночной Земле. Вербуй адептов, покупай догматы, отправляй агентов и держи Тревогу Бюро ниже 100 %. 300 сценариев.'),
         'en': ('Cult: Global Domination', 'A strategy simulator and clicker: a silly hidden order spreads over the night Earth. Recruit adepts, buy dogmas, send agents and keep the Bureau\'s Alarm under 100 %. 300 scenarios.')},
